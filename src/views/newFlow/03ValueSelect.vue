@@ -39,7 +39,7 @@
                 <input
                   class="custom-input"
                   v-model="getNumberFromSlider"
-                  @input="onChange($event)"
+                  @blur="onChange($event)"
                 />
               </td>
             </tr>
@@ -102,6 +102,7 @@
               <td colspan="3">
                 <input
                   class="custom-input"
+                  type="number"
                   v-model="sliderYearValue"
                 />
               </td>
@@ -112,7 +113,7 @@
                   v-model="sliderYearValue"
                   type="range"
                   min="1"
-                  max="40"
+                  max="30"
                   class="slider"
                   step="1"
                   style="width: 100%"
@@ -191,7 +192,7 @@ export default {
     },
     onChange(event) {
       const data = event.target.value;
-      this.sliderValue = +data.replaceAll(',', '');
+      this.sliderValue = +data.replace(',', '');
     },
     gotoPage() {
       this.$router.push('/location');
