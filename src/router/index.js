@@ -12,51 +12,6 @@ const routes = [
         component: () => import('@/views/Home.vue'),
       },
       {
-        path: '/PromotionSelect',
-        name: 'PromotionSelect',
-        component: () => import('@/views/newFlow/01PromotionSelect.vue'),
-      },
-      {
-        path: '/TypeHome2',
-        name: 'TypeHome2',
-        component: () => import('@/views/newFlow/02TypeHome.vue'),
-      },
-      {
-        path: '/ValueSelect2',
-        name: 'ValueSelect2',
-        component: () => import('@/views/newFlow/03ValueSelect.vue'),
-      },
-      {
-        path: '/Salary',
-        name: 'Salary',
-        component: () => import('@/views/newFlow/04Salary.vue'),
-      },
-      {
-        path: '/Age',
-        name: 'Age',
-        component: () => import('@/views/newFlow/05Age.vue'),
-      },
-      {
-        path: '/Occupation',
-        name: 'Occupation',
-        component: () => import('@/views/newFlow/06Occupation.vue'),
-      },
-      {
-        path: '/Loading2',
-        name: 'Loading2',
-        component: () => import('@/views/newFlow/07Loading.vue'),
-      },
-      {
-        path: '/Result3',
-        name: 'Result3',
-        component: () => import('@/views/newFlow/08Result.vue'),
-      },
-      {
-        path: '/Home2',
-        name: 'Home2',
-        component: () => import('@/views/newFlow/Home.vue'),
-      },
-      {
         path: '/TypeHome',
         name: 'TypeHome',
         component: () => import('@/views/01TypeHome.vue'),
