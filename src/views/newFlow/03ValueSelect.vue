@@ -100,10 +100,7 @@
             </tr>
             <tr>
               <td colspan="3">
-                <input
-                  class="custom-input"
-                  v-model="sliderYearValue"
-                />
+                <input class="custom-input" v-model="sliderYearValue" />
               </td>
             </tr>
             <tr>
@@ -146,10 +143,9 @@
                 <v-btn
                   block
                   variant="elevated"
-                  :color="disabledValue ? '' : 'primary'"
-                  :disabled="disabledValue"
+                  color="primary"
                   style="margin-top: 30px; padding: 25px"
-                  v-on:click="this.$router.push('/JobSelect')"
+                  v-on:click="gogo()"
                 >
                   ถัดไป
                 </v-btn>
@@ -193,8 +189,8 @@ export default {
       const data = event.target.value;
       this.sliderValue = +data.replaceAll(',', '');
     },
-    gotoPage() {
-      this.$router.push('/location');
+    gogo() {
+      this.$router.push('/Salary');
     },
   },
 };

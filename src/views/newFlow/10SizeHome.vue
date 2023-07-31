@@ -13,8 +13,19 @@
               font-style: normal;
               font-weight: 700;
             "
-            >รายได้และค่าใช้จ่าย</span
+            >ขนาดและพื้นที่ใช้สอย</span
           >
+        </v-col>
+      </v-row>
+      <v-row class="d-flex align-center justify-center">
+        <v-col>
+          <img
+            alt=""
+            src="src/assets/images/size-home.png
+            "
+            width="290"
+            height="163"
+          />
         </v-col>
       </v-row>
 
@@ -30,7 +41,7 @@
                     font-style: normal;
                     font-weight: 400;
                   "
-                  >รายได้รวมต่อเดือน (บาท)</span
+                  >ที่ดินทั้งหมด (ตารางวา)</span
                 >
               </td>
             </tr>
@@ -39,7 +50,7 @@
                 <div class="input-suffix ms">
                   <input
                     class="custom-input"
-                    placeholder="กรุณาระบุรายได้ต่อเดือน"
+                    placeholder="ระบุพื้นที่ดิน"
                     :value="getNumberFromSalary"
                     @input="onChangeSalary($event)"
                   />
@@ -62,16 +73,16 @@
                     font-style: normal;
                     font-weight: 400;
                   "
-                  >ภาระค่าใช้จ่ายต่อเดือน (บาท)</span
+                  >พื้นที่ใช้สอยภายในบ้าน (ตารางเมตร)</span
                 >
               </td>
             </tr>
             <tr>
               <td colspan="3">
-                <div class="input-suffix ms">
+                <div class="input-suffix mm">
                   <input
                     class="custom-input"
-                    placeholder="กรุณาระบุค่าใช้จ่ายต่อเดือน"
+                    placeholder="ระบุพื้นที่ใช้สอย"
                     :value="getNumberFromExpenses"
                     @input="onChangeExpenses($event)"
                   />
@@ -86,7 +97,7 @@
                   :color="!isDisabled ? '' : 'primary'"
                   :disabled="!isDisabled"
                   style="margin-top: 30px; padding: 25px"
-                  v-on:click="gogo()"
+                  v-on:click="gogo"
                 >
                   ถัดไป
                 </v-btn>
@@ -117,9 +128,9 @@ export default {
     getNumberFromExpenses() {
       return this.numberWithCommas(this.expenses);
     },
-    isDisabled(){
-      return this.salary !== '' && this.expenses !== ''
-    }
+    isDisabled() {
+      return this.salary !== '' && this.expenses !== '';
+    },
   },
   methods: {
     numberWithCommas(x) {
@@ -136,7 +147,7 @@ export default {
       this.expenses = +data.replaceAll(',', '');
     },
     gogo() {
-      this.$router.push('/Age');
+      this.$router.push('/LoadingHouse');
     },
   },
 };
@@ -167,7 +178,12 @@ export default {
 }
 
 .ms::after {
-  content: 'บาท';
+  content: 'ตารางวา';
+  padding-top: 7px;
+}
+
+.mm::after {
+  content: 'ตารางเมตร';
   padding-top: 7px;
 }
 </style>

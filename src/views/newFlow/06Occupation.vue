@@ -144,7 +144,7 @@
             :color="disabledValue ? '' : 'primary'"
             :disabled="disabledValue"
             style="margin-top: 30px; padding: 25px"
-            v-on:click="mm()"
+            v-on:click="gogo()"
           >
             ถัดไป
           </v-btn>
@@ -169,21 +169,21 @@ export default {
     };
   },
   methods: {
-    mm() {
+    gogo() {
       // alert(this.ids)
-      if (this.ids == '1') {
-        localStorage.setItem('flow', '1');
-        //  this.$router.push('/Homevalue')
-      } else if (this.ids == '2') {
-        localStorage.setItem('flow', '1');
-        //   this.$router.push('/Homevalue')
-      } else if (this.ids == '3') {
-        localStorage.setItem('flow', '1');
-        //   this.$router.push('/Homevalue')
-      }
+      // if (this.ids == '1') {
+      //   localStorage.setItem('flow', '1');
+      //   //  this.$router.push('/Homevalue')
+      // } else if (this.ids == '2') {
+      //   localStorage.setItem('flow', '1');
+      //   //   this.$router.push('/Homevalue')
+      // } else if (this.ids == '3') {
+      //   localStorage.setItem('flow', '1');
+      //   //   this.$router.push('/Homevalue')
+      // }
 
-      localStorage.setItem('flow', '1');
-      this.$router.push('/ValueSelect');
+      // localStorage.setItem('flow', '1');
+      this.$router.push('/Loading2');
     },
     clickBtn(n) {
       if (n == '1') {

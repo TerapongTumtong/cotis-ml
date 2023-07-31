@@ -35,12 +35,12 @@
               </td>
             </tr>
             <tr>
-              <td colspan="3">
-                  <input
-                    class="custom-input"
-                    placeholder="กรุณาระบุอายุของคุณ"
-                    :v-model="age"
-                  />
+              <td colspan="3" style="text-align: left">
+                <input
+                  class="custom-input"
+                  placeholder="กรุณาระบุอายุของคุณ"
+                  v-model="age"
+                />
               </td>
             </tr>
             <tr>
@@ -65,11 +65,11 @@
             </tr>
             <tr>
               <td colspan="3">
-                  <input
-                    class="custom-input"
-                    placeholder="กรุณาระบุอายุงานของคุณ"
-                    :v-model="experience"
-                  />
+                <input
+                  class="custom-input"
+                  placeholder="กรุณาระบุอายุงานของคุณ"
+                  v-model="experience"
+                />
               </td>
             </tr>
             <tr>
@@ -80,7 +80,7 @@
                   :color="!isDisabled ? '' : 'primary'"
                   :disabled="!isDisabled"
                   style="margin-top: 30px; padding: 25px"
-                  v-on:click="this.$router.push('/JobSelect')"
+                  v-on:click="gogo()"
                 >
                   ถัดไป
                 </v-btn>
@@ -100,20 +100,18 @@
 export default {
   data() {
     return {
-      age: '',
-      experience: '',
+      age: null,
+      experience: null,
     };
   },
   computed: {
-
-    isDisabled(){
-      return this.age !== '' && this.experience !== ''
-    }
+    isDisabled() {
+      return this.age !== null && this.experience !== null;
+    },
   },
   methods: {
-
-    gotoPage() {
-      this.$router.push('/location');
+    gogo() {
+      this.$router.push('/Occupation');
     },
   },
 };

@@ -1,12 +1,12 @@
 <template>
-  <v-container style="height: 100vh" class="main">
+  <v-container style="height: 93vh" class="main">
     <v-responsive class="d-flex text-center fill-height">
       <v-row class="d-flex align-center justify-center">
-        <v-col cols="auto">
+        <v-col cols="auto" style="margin-top: 39px">
           <span
             style="
               color: #2d2d2d;
-              font-size: 24px;
+              font-size: 32px;
               font-style: normal;
               font-weight: 700;
             "
@@ -31,8 +31,8 @@
             alt=""
             src="src/assets/images/roof-saver.png
             "
-            width="200"
-            height="55"
+            width="226"
+            height="65"
           />
         </v-col>
       </v-row>
@@ -41,12 +41,26 @@
           <span
             style="
               color: #2d2d2d;
-              font-size: 24px;
+              font-size: 19px;
               font-style: normal;
-              font-weight: 700;
+              font-weight: 500;
             "
-            >เปลี่ยนบ้านเป็นเงินไม่ใช่เรื่องยากอีกต่อไป</span
+            >เครื่องมือที่จะช่วยให้คุณหา<br />
+            สินเชื่อบ้านแลกเงินที่เหมาะกับคุณ !</span
           >
+        </v-col>
+      </v-row>
+      <v-row class="d-flex align-center justify-center">
+        <v-col cols="auto">
+          <v-btn
+            block
+            variant="elevated"
+            color="primary"
+            style="padding: 25px; width: 176px; margin-top: 31px"
+            v-on:click="btnPromotion()"
+          >
+            ค้นหาโปรโมชั่น
+          </v-btn>
         </v-col>
       </v-row>
     </v-responsive>
@@ -57,7 +71,7 @@
         <v-col cols="auto">
           <span
             style="
-              color: #1369B0;
+              color: #1369b0;
               font-size: 24px;
               font-style: normal;
               font-weight: 700;
@@ -69,11 +83,7 @@
       <v-row class="d-flex align-center justify-center">
         <v-col cols="auto">
           <v-card>
-            <v-tabs
-              v-model="tab"
-              color="primary"
-              align-tabs="center"
-            >
+            <v-tabs v-model="tab" color="primary" align-tabs="center">
               <v-tab :value="1">ดอกเบี้ยต่ำ 🔻</v-tab>
               <v-tab :value="2">ค่างวดน้อย 🤏</v-tab>
               <v-tab :value="3">วงเงินสูง 💵</v-tab>
@@ -165,7 +175,7 @@
                           <v-btn
                             color="primary"
                             variant="outlined"
-                            @click="detail"
+                            @click="dialog = true"
                             style="display: flex; flex: 1 0 auto"
                           >
                             รายละเอียด
@@ -259,7 +269,7 @@
                           <v-btn
                             color="primary"
                             variant="outlined"
-                            @click="detail"
+                            @click="dialog = true"
                             style="display: flex; flex: 1 0 auto"
                           >
                             รายละเอียด
@@ -353,7 +363,7 @@
                           <v-btn
                             color="primary"
                             variant="outlined"
-                            @click="detail"
+                            @click="dialog = true"
                             style="display: flex; flex: 1 0 auto"
                           >
                             รายละเอียด
@@ -381,7 +391,10 @@
   </v-container>
   <v-container style="height: 100vh; background-color: #ddf3fc">
     <v-responsive class="d-flex align-center text-center fill-height">
-      <v-row class="d-flex align-center justify-center" style="margin-bottom: 30px;">
+      <v-row
+        class="d-flex align-center justify-center"
+        style="margin-bottom: 30px"
+      >
         <v-col cols="auto">
           <img
             alt=""
@@ -392,7 +405,10 @@
           />
         </v-col>
       </v-row>
-      <v-row class="d-flex align-center justify-center" style="margin-bottom: 20px;">
+      <v-row
+        class="d-flex align-center justify-center"
+        style="margin-bottom: 20px"
+      >
         <v-col cols="auto">
           <span
             style="
@@ -405,7 +421,7 @@
           >
         </v-col>
       </v-row>
-      <v-row style="margin-top: 10px;margin-bottom: 20px;">
+      <v-row style="margin-top: 10px; margin-bottom: 20px">
         <v-col>
           <v-card max-width="374" style="text-align: left; padding: 7px">
             <v-card-item style="text-align: left">
@@ -427,11 +443,151 @@
 
       <v-row class="d-flex align-center justify-center">
         <v-col cols="auto">
-          <v-btn block variant="elevated" color="primary" style="padding: 21px">
+          <v-btn
+            block
+            variant="elevated"
+            color="primary"
+            style="padding: 21px"
+            v-on:click="btnHouseEstimate()"
+          >
             ประเมินราคาของคุณ
           </v-btn>
         </v-col>
       </v-row>
+      <v-dialog v-model="dialog" width="340">
+        <v-card>
+          <v-card-title style="display: flex">
+            <div
+              style="
+                color: #1369b0;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+              "
+            ></div>
+            <v-spacer></v-spacer>
+            <v-icon
+              @click="dialog = false"
+              style="font-size: 20px; margin-top: 7px"
+              >mdi-close</v-icon
+            >
+          </v-card-title>
+          <v-card-title style="color: #1369b0; font-weight: 700"
+            >ดอกเบี้ยสามปีแรก 5.05 %</v-card-title
+          >
+          <v-card-subtitle style="color: #1369b0; font-weight: 700"
+            >รายละเอียดเพิ่มเติม</v-card-subtitle
+          >
+          <v-card-text>
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">กู้ได้สูงสุด</span>
+              <div style="flex-grow: 1"></div>
+              <div class="second-label">
+                <span style="color: #1369b0">90% </span>
+                <span>ของราคาประเมิน</span>
+              </div>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ประกันชีวิต (MRTA)</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label">ไม่ต้องทำ</span>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ผ่อนต่อเดือน (บาท)</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label" style="color: #1369b0">9,500</span>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ระยะเวลากู้สูงสุด (ปี)</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label">40 ปี</span>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ค่าใช้จ่ายอื่น ๆ</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label">13,600</span>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ดอกเบี้ยสามปีแรก</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label" style="color: #1369b0">5.05%</span>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ดอกเบี้ยสามปีแรก</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label" style="color: #1369b0">6.05%</span>
+            </div>
+          </v-card-text>
+          <v-card-subtitle style="color: #1369b0; font-weight: 700"
+            >ข้อดีของผลิตภัณฑ์ตัวนี้</v-card-subtitle
+          >
+          <v-card-text>
+            <div class="text-subtitle-modal">✓ แจ้งสถานะการติดตามผล</div>
+            <div class="text-subtitle-modal">✓ รู้ผลภายใน 48 ชั่วโมง</div>
+            <div class="text-subtitle-modal">✓ ส่งเอกสารสารออนไลน์</div>
+          </v-card-text>
+
+          <v-card-subtitle style="color: #1369b0; font-weight: 700"
+            >Reviews</v-card-subtitle
+          >
+          <v-card-text>
+            <div class="d-flex" style="flex-direction: row">
+              <span
+                style="
+                  color: #1369b0;
+                  font-size: 32px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+                >8.5</span
+              >
+              <div class="d-flex" style="flex-direction: column;margin-left: 18px;">
+                <div
+                  style="
+                    color: #1369b0;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                >
+                  ระดับ ดีเยี่ยม
+                </div>
+                <div
+                  style="
+                    color: #2d2d2d;
+                    font-size: 11px;
+                    font-style: normal;
+                    font-weight: 500;
+                  "
+                >
+                  4330 รีวิว
+                </div>
+              </div>
+            </div>
+          </v-card-text>
+          <v-checkbox
+              label="คุณได้ยอมรับข้อตกลงและเงื่อนไข และ นโยบายความคุ้มครองส่วนบุคคลของ RoofSaver "
+            ></v-checkbox>
+          <v-card-actions>
+            <v-btn
+              color="primary"
+              variant="elevated"
+              block
+              @click="
+                dialog = false;
+              "
+              style="padding: 25px"
+              >สมัครเลย !</v-btn
+            >
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-responsive>
   </v-container>
 </template>
@@ -442,6 +598,7 @@ export default {
   data() {
     return {
       tab: null,
+      dialog: false,
     };
   },
   async created() {
@@ -464,15 +621,20 @@ export default {
       });
   },
   methods: {
-    btn() {
-      this.$router.push('/TypeHome');
+    btnPromotion() {
+      localStorage.setItem('homeFlow', 'promotion');
+      this.$router.push('/PromotionSelect');
+    },
+    btnHouseEstimate() {
+      localStorage.setItem('homeFlow', 'houseEstimate');
+      this.$router.push('/TypeHome2');
     },
   },
 };
 </script>
 <style lang="scss" scoped>
 .main {
-  background-image: url('src/assets/images/main-body.png');
+  background-image: url('src/assets/images/bg.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -482,5 +644,29 @@ export default {
 }
 .tab-data .v-card {
   border-width: 1px !important;
+}
+.main-label {
+  color: #737373;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.second-label {
+  color: #2d2d2d;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+.text-subtitle-modal {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.25rem;
+  letter-spacing: 0.009375em !important;
+  font-family: 'Roboto', sans-serif !important;
+  text-transform: none !important;
+}
+:deep(.v-label) {
+  margin-top: 20px !important;
+  font-size: 12px !important;
 }
 </style>

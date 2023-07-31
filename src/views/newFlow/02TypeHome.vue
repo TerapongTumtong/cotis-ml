@@ -164,7 +164,7 @@
             :color="disabledValue ? '' : 'primary'"
             :disabled="disabledValue"
             style="margin-top: 30px; padding: 25px"
-            v-on:click="mm()"
+            v-on:click="gogo()"
           >
             ถัดไป
           </v-btn>
@@ -187,26 +187,33 @@ export default {
       flagbtn4: 'text',
       disabledValue: true,
       ids: 0,
+      navigate: localStorage.getItem('homeFlow'),
     };
   },
   methods: {
-    mm() {
+    gogo() {
       // alert(this.ids)
-      if (this.ids == '1') {
-        localStorage.setItem('flow', '1');
-        //  this.$router.push('/Homevalue')
-      } else if (this.ids == '2') {
-        localStorage.setItem('flow', '1');
-        //   this.$router.push('/Homevalue')
-      } else if (this.ids == '3') {
-        localStorage.setItem('flow', '1');
-        //   this.$router.push('/Condovalue')
-      } else if (this.ids == '4') {
-        localStorage.setItem('flow', '1');
-        //  this.$router.push('/Deedlandvalue')
+      // if (this.ids == '1') {
+      //   localStorage.setItem('flow', '1');
+      //   //  this.$router.push('/Homevalue')
+      // } else if (this.ids == '2') {
+      //   localStorage.setItem('flow', '1');
+      //   //   this.$router.push('/Homevalue')
+      // } else if (this.ids == '3') {
+      //   localStorage.setItem('flow', '1');
+      //   //   this.$router.push('/Condovalue')
+      // } else if (this.ids == '4') {
+      //   localStorage.setItem('flow', '1');
+      //   //  this.$router.push('/Deedlandvalue')
+      // }
+      // localStorage.setItem('flow', '1');
+      if(this.navigate === 'houseEstimate'){
+
+        this.$router.push('/Address');
+      }else{
+        this.$router.push('/ValueSelect2');
+
       }
-      localStorage.setItem('flow', '1');
-      this.$router.push('/ValueSelect');
     },
     clickBtn(n) {
       if (n == '1') {

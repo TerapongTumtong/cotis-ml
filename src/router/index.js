@@ -52,6 +52,26 @@ const routes = [
         component: () => import('@/views/newFlow/08Result.vue'),
       },
       {
+        path: '/Address',
+        name: 'Address',
+        component: () => import('@/views/newFlow/09Address.vue'),
+      },
+      {
+        path: '/SizeHome',
+        name: 'SizeHome',
+        component: () => import('@/views/newFlow/10SizeHome.vue'),
+      },
+      {
+        path: '/LoadingHouse',
+        name: 'LoadingHouse',
+        component: () => import('@/views/newFlow/11LoadingHouseEstimate.vue'),
+      },
+      {
+        path: '/ResultHouse',
+        name: 'ResultHouse',
+        component: () => import('@/views/newFlow/12ResultHouseEstimate.vue'),
+      },
+      {
         path: '/Home2',
         name: 'Home2',
         component: () => import('@/views/newFlow/Home.vue'),

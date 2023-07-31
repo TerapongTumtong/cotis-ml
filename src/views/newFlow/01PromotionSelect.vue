@@ -14,15 +14,15 @@
               font-style: normal;
               font-weight: 700;
             "
-            >คุณชอบแบบไหน ?</span
+            >คุณชอบแบบไหนasdasd ?</span
           >
         </v-col>
       </v-row>
       <v-radio-group v-model="flowSelect" column>
         <v-row class="d-flex align-center justify-center">
           <v-col cols="auto">
-            <v-sheet class="d-flex flex-wrap">
-              <v-sheet class="box-shadow flex-1-0 ma-0 pa-0">
+            <v-sheet class="d-flex flex-wrap" >
+              <v-sheet class="box-shadow flex-1-0 ma-0 pa-0" >
                 <!-- item 1-->
 
                 <v-btn
@@ -98,7 +98,7 @@
             :color="disabledValue ? '' : 'primary'"
             :disabled="disabledValue"
             style="margin-top: 30px;padding: 25px;"
-            v-on:click="mm()"
+            v-on:click="gogo()"
           >
             ถัดไป
           </v-btn>
@@ -122,17 +122,17 @@ export default {
     };
   },
   methods: {
-    mm() {
+    gogo() {
+      this.$router.push('/TypeHome2');
       // alert(this.ids)
-      if (this.ids == '1') {
-        localStorage.setItem('flow', '1');
-        //  this.$router.push('/Homevalue')
-      } else if (this.ids == '2') {
-        localStorage.setItem('flow', '1');
-        //   this.$router.push('/Homevalue')
-      }
-      localStorage.setItem('flow', '1');
-      this.$router.push('/ValueSelect');
+      // if (this.ids == '1') {
+      //   localStorage.setItem('flow', '1');
+      //   //  this.$router.push('/Homevalue')
+      // } else if (this.ids == '2') {
+      //   localStorage.setItem('flow', '1');
+      //   //   this.$router.push('/Homevalue')
+      // }
+      // localStorage.setItem('flow', '1');
     },
     clickBtn(n) {
       if (n == '1') {
