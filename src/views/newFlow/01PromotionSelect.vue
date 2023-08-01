@@ -6,7 +6,6 @@
         style="margin-top: 6px; margin-bottom: 6px"
       >
         <v-col cols="auto">
-
           <span
             style="
               color: #1369b0;
@@ -97,7 +96,7 @@
             variant="elevated"
             :color="disabledValue ? '' : 'primary'"
             :disabled="disabledValue"
-            style="margin-top: 30px;padding: 25px;"
+            style="margin-top: 30px; padding: 25px"
             v-on:click="gogo()"
           >
             ถัดไป
