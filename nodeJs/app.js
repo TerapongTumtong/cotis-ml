@@ -292,8 +292,10 @@ var server = http.createServer(function (req, res) {
                                           
                     }
                     if (mainString.includes("ค่างวดน้อย")) {
+
                     }
                     if (mainString.includes("วงเงินสูง")) {
+                        
                     }
 
 
