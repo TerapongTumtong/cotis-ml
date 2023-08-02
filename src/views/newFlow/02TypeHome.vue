@@ -176,7 +176,28 @@
 </template>
 
 <script>
+import liff from '@line/liff';
 export default {
+  created(){
+    let liffIdData = '';
+    liffIdData = { liffId: '1661053996-DM6wOEgR' }; // offline
+    //  liffIdData = { liffId: "1661053996-ypbnDgve" }; // online
+
+    liff
+      .init(liffIdData)
+      .then(async () => {
+        if (liff.isLoggedIn()) {
+          console.log((await liff.getProfile()).userId);
+          localStorage.setItem('profileId', (await liff.getProfile()).userId);
+        } else {
+          liff.login();
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  },
+
   data() {
     return {
       homeSelect: '',

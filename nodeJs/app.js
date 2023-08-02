@@ -288,6 +288,15 @@ var server = http.createServer(function (req, res) {
                      userid = mainString.substring(us, ue);
 
                     }
+                    if (mainString.includes("ดอกเบี้ยต่ำ")) {
+                                          
+                    }
+                    if (mainString.includes("ค่างวดน้อย")) {
+                    }
+                    if (mainString.includes("วงเงินสูง")) {
+                    }
+
+
                 if (mainString.includes("เข้าสู่ Roofsaver")) {
                       reqq = {
                         "token": "Bearer eVzQQbp6xcKhc9LNPSPwf3K1TgQ8Fp6Hgi8FKl8o4WSQNWrpJF7V5/suwjESd74m/0LtwWgThB7xNzvDfQCJ5eYKj6Ibu0OumCE69To5/PTEHrlG9o3S8sGCHTLhfviMPQsQFExdMWaKqD5l5f8EjAdB04t89/1O/w1cDnyilFU=",
@@ -298,6 +307,53 @@ var server = http.createServer(function (req, res) {
                             ],
                             "messages": [
                                 {
+                                    "type": "flex",
+                                    "altText": "Summary",
+                                    "contents": 
+                                    {
+                      "type": "bubble",
+                      "body": {
+                        "type": "box",
+                        "layout": "vertical",
+                        "contents": [
+                          {
+                            "type": "text",
+                            "text": "ที่ปรึกษาทางการเงินทุกอย่าง"
+                          },
+                          {
+                            "type": "text",
+                            "text": "เกี่ยวกับบ้าน ไม่ว่าจะเป็น"
+                          },
+                          {
+                            "type": "text",
+                            "text": "> แนะนำโปโมชั่นที่เหมาะกับคุณ"
+                          },
+                          {
+                            "type": "text",
+                            "text": "> ประเมินราคาบ้านเบื้องต้น"
+                          },
+                          {
+                            "type": "text",
+                            "text": "> ติดตามสถานะการสมัคร"
+                          },
+                          {
+                            "type": "separator",
+                            "margin": "sm"
+                          },
+                          {
+                            "type": "button",
+                            "action": {
+                              "type": "uri",
+                              "label": "ค้นหา โปรโมชั่นเลย",
+                              "uri": "https://liff.line.me/1661053996-ob21KOkQ"
+                            },
+                            "color": "#0384fc",
+                            "style": "primary"
+                          }
+                        ]
+                      }
+                    }
+                                }, {
                                     "type": "text", // ①
                                     "text": "คุณกำลังหาโปรโมชั่นแบบไหนอยู่ครับ",
                                     "quickReply": { // ②
