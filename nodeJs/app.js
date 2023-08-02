@@ -377,12 +377,13 @@ var server = http.createServer(function (req, res) {
                                     "quickReply": { // ②
                                         "items": [
                                             {
-                                                "type": "action", //1
+                                                "type": "action", // 2
+                                                "action": {
                                                     "type": "message",
                                                     "label": "ดอกเบี้ยต่ำ",
                                                     "text": "ดอกเบี้ยต่ำ"
                                                 }
-                                            ,
+                                            },
                                             {
                                                 "type": "action", // 2
                                                 "action": {
