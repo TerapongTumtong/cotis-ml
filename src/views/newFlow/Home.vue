@@ -82,7 +82,7 @@
       </v-row>
       <v-row class="d-flex align-center justify-center">
         <v-col cols="auto">
-          <v-card>
+          <v-card id="test">
             <v-tabs v-model="tab" color="primary" align-tabs="center">
               <v-tab :value="1">ดอกเบี้ยต่ำ 🔻</v-tab>
               <v-tab :value="2">ค่างวดน้อย 🤏</v-tab>
@@ -547,7 +547,10 @@
                 "
                 >8.5</span
               >
-              <div class="d-flex" style="flex-direction: column;margin-left: 18px;">
+              <div
+                class="d-flex"
+                style="flex-direction: column; margin-left: 18px"
+              >
                 <div
                   style="
                     color: #1369b0;
@@ -572,16 +575,14 @@
             </div>
           </v-card-text>
           <v-checkbox
-              label="คุณได้ยอมรับข้อตกลงและเงื่อนไข และ นโยบายความคุ้มครองส่วนบุคคลของ RoofSaver "
-            ></v-checkbox>
+            label="คุณได้ยอมรับข้อตกลงและเงื่อนไข และ นโยบายความคุ้มครองส่วนบุคคลของ RoofSaver "
+          ></v-checkbox>
           <v-card-actions>
             <v-btn
               color="primary"
               variant="elevated"
               block
-              @click="
-                dialog = false;
-              "
+              @click="dialog = false"
               style="padding: 25px"
               >สมัครเลย !</v-btn
             >
@@ -602,9 +603,17 @@ export default {
     };
   },
   async created() {
+    console.log('The id is: ' + this.$route.query.isDialogActive);
+    const isDialogActive = this.$route.query.isDialogActive;
     let liffIdData = '';
-    liffIdData = { liffId: '1661053996-qZXnM4oG' }; // offline
-    //  liffIdData = { liffId: "1661053996-ypbnDgve" }; // online
+    if (isDialogActive) {
+      this.dialog = true;
+      // liffIdData = { liffId: '1661053996-leP7JVXD' }; // offline
+       liffIdData = { liffId: "1661053996-5l7ngqMJ" }; // online
+    } else {
+      // liffIdData = { liffId: '1661053996-o26EmVjA' }; // offline
+       liffIdData = { liffId: "1661053996-ob21KOkQ" }; // online
+    }
 
     liff
       .init(liffIdData)

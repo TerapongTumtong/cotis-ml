@@ -13,7 +13,7 @@
               font-style: normal;
               font-weight: 700;
             "
-            >คุณชอบแบบไหนasdasd ?</span
+            >คุณชอบแบบไหน ?</span
           >
         </v-col>
       </v-row>

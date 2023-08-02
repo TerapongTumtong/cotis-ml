@@ -1,7 +1,10 @@
 <template>
   <v-container>
     <v-responsive class="d-flex align-center text-center fill-height">
-      <v-row class="d-flex align-center justify-center" style="margin-top: 3px; margin-bottom: 3px">
+      <v-row
+        class="d-flex align-center justify-center"
+        style="margin-top: 3px; margin-bottom: 3px"
+      >
         <v-col cols="auto">
           <span
             style="
@@ -178,10 +181,10 @@
 <script>
 import liff from '@line/liff';
 export default {
-  created(){
+  created() {
     let liffIdData = '';
-    liffIdData = { liffId: '1661053996-DM6wOEgR' }; // offline
-    //  liffIdData = { liffId: "1661053996-ypbnDgve" }; // online
+    // liffIdData = { liffId: '1661053996-DM6wOEgR' }; // offline
+     liffIdData = { liffId: "1661053996-85PKey2w" }; // online
 
     liff
       .init(liffIdData)
@@ -228,12 +231,10 @@ export default {
       //   //  this.$router.push('/Deedlandvalue')
       // }
       // localStorage.setItem('flow', '1');
-      if(this.navigate === 'houseEstimate'){
-
+      if (this.navigate === 'houseEstimate') {
         this.$router.push('/Address');
-      }else{
+      } else {
         this.$router.push('/ValueSelect2');
-
       }
     },
     clickBtn(n) {

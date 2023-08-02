@@ -70,8 +70,8 @@ export default {
   },
   async created() {
     let liffIdData = '';
-    liffIdData = { liffId: '1661053996-qZXnM4oG' }; // offline
-    //  liffIdData = { liffId: "1661053996-ypbnDgve" }; // online
+    // liffIdData = { liffId: '1661053996-qZXnM4oG' }; // offline
+     liffIdData = { liffId: "1661053996-ypbnDgve" }; // online
 
     liff
       .init(liffIdData)
