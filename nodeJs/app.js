@@ -355,7 +355,23 @@ var server = http.createServer(function (req, res) {
                         ]
                       }
                     }
-                                }, {
+                                }
+                                                             
+
+                            ]
+                        }
+                    }
+                    await sendLineMsgin(reqq);
+                    //--2--//
+                    reqq = {
+                        "token": "Bearer eVzQQbp6xcKhc9LNPSPwf3K1TgQ8Fp6Hgi8FKl8o4WSQNWrpJF7V5/suwjESd74m/0LtwWgThB7xNzvDfQCJ5eYKj6Ibu0OumCE69To5/PTEHrlG9o3S8sGCHTLhfviMPQsQFExdMWaKqD5l5f8EjAdB04t89/1O/w1cDnyilFU=",
+                        "userId": userid,
+                        "data": {
+                            "to": [
+                                userid
+                            ],
+                            "messages": [
+                                {
                                     "type": "text", // ①
                                     "text": "คุณกำลังหาโปรโมชั่นแบบไหนอยู่ครับ",
                                     "quickReply": { // ②
@@ -385,32 +401,47 @@ var server = http.createServer(function (req, res) {
                                             }
                                         ]
                                     }
-                                },
-                                                                {
-                                    "type": "text", // ①
-                                    "text": "ให้เราเลือกให้",
-                                    "quickReply": { // ②
-                                        "items": [
-                                         {
-                                                "type": "action", //1
-                                                "action": {
-                                                  "type": "uri",
-                                                  "label": "ให้เราแนะนำ",
-                                                  "uri": "https://liff.line.me/1661053996-ypbnDgve"
-                                                }
-                                            }
-                                        
-                                        ]
-                                    }
                                 }
+                                                             
 
                             ]
                         }
                     }
                     await sendLineMsgin(reqq);
-
+                    //---3---//
                     
+                   //--2--//
+                   reqq = {
+                    "token": "Bearer eVzQQbp6xcKhc9LNPSPwf3K1TgQ8Fp6Hgi8FKl8o4WSQNWrpJF7V5/suwjESd74m/0LtwWgThB7xNzvDfQCJ5eYKj6Ibu0OumCE69To5/PTEHrlG9o3S8sGCHTLhfviMPQsQFExdMWaKqD5l5f8EjAdB04t89/1O/w1cDnyilFU=",
+                    "userId": userid,
+                    "data": {
+                        "to": [
+                            userid
+                        ],
+                        "messages": [
+                            {
+                                "type": "text", // ①
+                                "text": "ให้เราเลือกให้",
+                                "quickReply": { // ②
+                                    "items": [
+                                     {
+                                            "type": "action", //1
+                                            "action": {
+                                              "type": "uri",
+                                              "label": "ให้เราแนะนำ",
+                                              "uri": "https://liff.line.me/1661053996-ypbnDgve"
+                                            }
+                                        }
+                                    
+                                    ]
+                                }
+                            }
+                                                         
 
+                        ]
+                    }
+                }
+                await sendLineMsgin(reqq);
                 }
                 if (mainString.includes("แคมเปญที่สมัคร")) {
                     reqq = {
