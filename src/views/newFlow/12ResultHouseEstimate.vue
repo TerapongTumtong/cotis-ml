@@ -128,6 +128,7 @@
           variant="outlined"
           color="primary"
           style="margin-top: 15px; padding: 25px"
+          v-on:click="sendDataToLine()"
         >
           ส่งข้อมูลไปยังไลน์
         </v-btn>
@@ -137,6 +138,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+import liff from '@line/liff';
 export default {
   data: () => ({
     dialog: false,
@@ -146,7 +149,80 @@ export default {
 
   methods: {
     gogo() {
-      this.$router.push('/Home2');
+      this.$router.push('/Result3');
+    },
+    async sendDataToLine() {
+      const headers = {
+        'Content-Type': 'application/json',
+      };
+      let req;
+
+      req = {
+        token:
+          'Bearer eVzQQbp6xcKhc9LNPSPwf3K1TgQ8Fp6Hgi8FKl8o4WSQNWrpJF7V5/suwjESd74m/0LtwWgThB7xNzvDfQCJ5eYKj6Ibu0OumCE69To5/PTEHrlG9o3S8sGCHTLhfviMPQsQFExdMWaKqD5l5f8EjAdB04t89/1O/w1cDnyilFU=',
+        userId: localStorage.getItem('profileId'),
+        data: {
+          to: [localStorage.getItem('profileId')],
+          messages: [
+            {
+              type: 'flex',
+              altText: 'Summary',
+              contents: {
+                type: 'bubble',
+                hero: {
+                  type: 'image',
+                  url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/estimate_house1.png',
+                  size: 'full',
+                  aspectRatio: '20:22',
+                  aspectMode: 'fit',
+                  offsetTop: 'none',
+                  offsetStart: 'none',
+                },
+                body: {
+                  type: 'box',
+                  layout: 'vertical',
+                  contents: [
+                    {
+                      type: 'button',
+                      action: {
+                        type: 'uri',
+                        label: 'สมัครสินเชื่อเลย !',
+                        uri: 'https://liff.line.me/1661053996-85PKey2w',
+                      },
+                      style: 'primary',
+                      color: '#0384fc',
+                      height: 'sm',
+                    },
+                    {
+                      type: 'button',
+                      action: {
+                        type: 'uri',
+                        label: 'รายละเอียดเพิ่มเติม',
+                        uri: 'https://liff.line.me/1661053996-G1BmJKOw',
+                      },
+                      height: 'sm',
+                      style: 'primary',
+                      color: '#0384fc',
+                      offsetTop: 'md',
+                    },
+                  ],
+                },
+              },
+            },
+          ],
+        },
+      };
+
+      await axios
+        .post('https://d3uc9t7bjwxv55.cloudfront.net/api/sendLineMsg', req, {
+          headers,
+        })
+        .then((response) => response.data);
+
+      await liff.closeWindow();
+      await liff.logout();
+      await window.close();
+      this.$router.push('');
     },
     required(v) {
       return !!v || 'Field is required';

@@ -582,7 +582,7 @@
               color="primary"
               variant="elevated"
               block
-              @click="dialog = false"
+              @click="dialog = false;btnHouseEstimate()"
               style="padding: 25px"
               >สมัครเลย !</v-btn
             >
