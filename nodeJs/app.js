@@ -313,10 +313,350 @@ var server = http.createServer(function (req, res) {
           userid = mainString.substring(us, ue);
         }
         if (mainString.includes('ดอกเบี้ยต่ำ')) {
+          reqq = {
+            token:
+              'Bearer eVzQQbp6xcKhc9LNPSPwf3K1TgQ8Fp6Hgi8FKl8o4WSQNWrpJF7V5/suwjESd74m/0LtwWgThB7xNzvDfQCJ5eYKj6Ibu0OumCE69To5/PTEHrlG9o3S8sGCHTLhfviMPQsQFExdMWaKqD5l5f8EjAdB04t89/1O/w1cDnyilFU=',
+            userId: userid,
+            data: {
+              to: [userid],
+              messages: [
+                {
+                  type: 'flex',
+                  altText: 'Summary',
+                  contents: {
+                    type: 'carousel',
+                    contents: [
+                      {
+                        type: 'bubble',
+                        hero: {
+                          type: 'image',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
+                          size: 'full',
+                          aspectRatio: '20:13',
+                          aspectMode: 'fit',
+                          action: {
+                            type: 'uri',
+                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
+                          },
+                        },
+                        body: {
+                          type: 'box',
+                          layout: 'horizontal',
+                          contents: [
+                            {
+                              type: 'button',
+                              action: {
+                                type: 'uri',
+                                label: 'รายละเอียด',
+                                uri: 'https://liff.line.me/1661053996-5l7ngqMJ',
+                              },
+                              color: '#0384fc',
+                              style: 'primary',
+                              height: 'sm',
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        type: 'bubble',
+                        hero: {
+                          type: 'image',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
+                          size: 'full',
+                          aspectRatio: '20:13',
+                          aspectMode: 'fit',
+                          action: {
+                            type: 'uri',
+                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
+                          },
+                        },
+                        body: {
+                          type: 'box',
+                          layout: 'horizontal',
+                          contents: [
+                            {
+                              type: 'button',
+                              action: {
+                                type: 'uri',
+                                label: 'รายละเอียด',
+                                uri: 'https://liff.line.me/1661053996-5l7ngqMJ',
+                              },
+                              color: '#0384fc',
+                              style: 'primary',
+                              height: 'sm',
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        type: 'bubble',
+                        hero: {
+                          type: 'image',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
+                          size: 'full',
+                          aspectRatio: '20:13',
+                          aspectMode: 'fit',
+                          action: {
+                            type: 'uri',
+                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
+                          },
+                        },
+                        body: {
+                          type: 'box',
+                          layout: 'horizontal',
+                          contents: [
+                            {
+                              type: 'button',
+                              action: {
+                                type: 'uri',
+                                label: 'รายละเอียด',
+                                uri: 'https://liff.line.me/1661053996-5l7ngqMJ',
+                              },
+                              color: '#0384fc',
+                              style: 'primary',
+                              height: 'sm',
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          };
+          await sendLineMsgin(reqq);
         }
+
         if (mainString.includes('ค่างวดน้อย')) {
+          reqq = {
+            token:
+              'Bearer eVzQQbp6xcKhc9LNPSPwf3K1TgQ8Fp6Hgi8FKl8o4WSQNWrpJF7V5/suwjESd74m/0LtwWgThB7xNzvDfQCJ5eYKj6Ibu0OumCE69To5/PTEHrlG9o3S8sGCHTLhfviMPQsQFExdMWaKqD5l5f8EjAdB04t89/1O/w1cDnyilFU=',
+            userId: userid,
+            data: {
+              to: [userid],
+              messages: [
+                {
+                  type: 'flex',
+                  altText: 'Summary',
+                  contents: {
+                    type: 'carousel',
+                    contents: [
+                      {
+                        type: 'bubble',
+                        hero: {
+                          type: 'image',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
+                          size: 'full',
+                          aspectRatio: '20:13',
+                          aspectMode: 'fit',
+                          action: {
+                            type: 'uri',
+                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
+                          },
+                        },
+                        body: {
+                          type: 'box',
+                          layout: 'horizontal',
+                          contents: [
+                            {
+                              type: 'button',
+                              action: {
+                                type: 'uri',
+                                label: 'รายละเอียด',
+                                uri: 'https://liff.line.me/1661053996-5l7ngqMJ',
+                              },
+                              color: '#0384fc',
+                              style: 'primary',
+                              height: 'sm',
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        type: 'bubble',
+                        hero: {
+                          type: 'image',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
+                          size: 'full',
+                          aspectRatio: '20:13',
+                          aspectMode: 'fit',
+                          action: {
+                            type: 'uri',
+                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
+                          },
+                        },
+                        body: {
+                          type: 'box',
+                          layout: 'horizontal',
+                          contents: [
+                            {
+                              type: 'button',
+                              action: {
+                                type: 'uri',
+                                label: 'รายละเอียด',
+                                uri: 'https://liff.line.me/1661053996-5l7ngqMJ',
+                              },
+                              color: '#0384fc',
+                              style: 'primary',
+                              height: 'sm',
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        type: 'bubble',
+                        hero: {
+                          type: 'image',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
+                          size: 'full',
+                          aspectRatio: '20:13',
+                          aspectMode: 'fit',
+                          action: {
+                            type: 'uri',
+                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
+                          },
+                        },
+                        body: {
+                          type: 'box',
+                          layout: 'horizontal',
+                          contents: [
+                            {
+                              type: 'button',
+                              action: {
+                                type: 'uri',
+                                label: 'รายละเอียด',
+                                uri: 'https://liff.line.me/1661053996-5l7ngqMJ',
+                              },
+                              color: '#0384fc',
+                              style: 'primary',
+                              height: 'sm',
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          };
+          await sendLineMsgin(reqq);
         }
         if (mainString.includes('วงเงินสูง')) {
+          reqq = {
+            token:
+              'Bearer eVzQQbp6xcKhc9LNPSPwf3K1TgQ8Fp6Hgi8FKl8o4WSQNWrpJF7V5/suwjESd74m/0LtwWgThB7xNzvDfQCJ5eYKj6Ibu0OumCE69To5/PTEHrlG9o3S8sGCHTLhfviMPQsQFExdMWaKqD5l5f8EjAdB04t89/1O/w1cDnyilFU=',
+            userId: userid,
+            data: {
+              to: [userid],
+              messages: [
+                {
+                  type: 'flex',
+                  altText: 'Summary',
+                  contents: {
+                    type: 'carousel',
+                    contents: [
+                      {
+                        type: 'bubble',
+                        hero: {
+                          type: 'image',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
+                          size: 'full',
+                          aspectRatio: '20:13',
+                          aspectMode: 'fit',
+                          action: {
+                            type: 'uri',
+                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
+                          },
+                        },
+                        body: {
+                          type: 'box',
+                          layout: 'horizontal',
+                          contents: [
+                            {
+                              type: 'button',
+                              action: {
+                                type: 'uri',
+                                label: 'รายละเอียด',
+                                uri: 'https://liff.line.me/1661053996-5l7ngqMJ',
+                              },
+                              color: '#0384fc',
+                              style: 'primary',
+                              height: 'sm',
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        type: 'bubble',
+                        hero: {
+                          type: 'image',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
+                          size: 'full',
+                          aspectRatio: '20:13',
+                          aspectMode: 'fit',
+                          action: {
+                            type: 'uri',
+                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
+                          },
+                        },
+                        body: {
+                          type: 'box',
+                          layout: 'horizontal',
+                          contents: [
+                            {
+                              type: 'button',
+                              action: {
+                                type: 'uri',
+                                label: 'รายละเอียด',
+                                uri: 'https://liff.line.me/1661053996-5l7ngqMJ',
+                              },
+                              color: '#0384fc',
+                              style: 'primary',
+                              height: 'sm',
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        type: 'bubble',
+                        hero: {
+                          type: 'image',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
+                          size: 'full',
+                          aspectRatio: '20:13',
+                          aspectMode: 'fit',
+                          action: {
+                            type: 'uri',
+                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
+                          },
+                        },
+                        body: {
+                          type: 'box',
+                          layout: 'horizontal',
+                          contents: [
+                            {
+                              type: 'button',
+                              action: {
+                                type: 'uri',
+                                label: 'รายละเอียด',
+                                uri: 'https://liff.line.me/1661053996-5l7ngqMJ',
+                              },
+                              color: '#0384fc',
+                              style: 'primary',
+                              height: 'sm',
+                            },
+                          ],
+                        },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          };
+          await sendLineMsgin(reqq);
         }
 
         if (mainString.includes('เข้าสู่ Roofsaver')) {

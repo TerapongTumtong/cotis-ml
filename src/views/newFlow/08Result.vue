@@ -87,7 +87,7 @@
               <v-btn
                 color="primary"
                 variant="outlined"
-                @click="detail"
+                @click="dialog_detail = true"
                 style="display: flex; flex: 1 0 auto; width: 78px"
               >
                 รายละเอียด
@@ -217,7 +217,7 @@
               <v-btn
                 color="primary"
                 variant="outlined"
-                @click="detail"
+                @click="dialog_detail = true"
                 style="display: flex; flex: 1 0 auto; width: 78px"
               >
                 รายละเอียด
@@ -308,7 +308,7 @@
               <v-btn
                 color="primary"
                 variant="outlined"
-                @click="detail"
+                @click="dialog_detail = true"
                 style="display: flex; flex: 1 0 auto; width: 78px"
               >
                 รายละเอียด
@@ -399,7 +399,7 @@
               <v-btn
                 color="primary"
                 variant="outlined"
-                @click="detail"
+                @click="dialog_detail = true"
                 style="display: flex; flex: 1 0 auto; width: 78px"
               >
                 รายละเอียด
@@ -579,6 +579,143 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
+
+      <!-- dialog detail -->
+       <v-dialog v-model="dialog_detail" width="340">
+        <v-card>
+          <v-card-title style="display: flex">
+            <div
+              style="
+                color: #1369b0;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+              "
+            ></div>
+            <v-spacer></v-spacer>
+            <v-icon
+              @click="dialog_detail = false"
+              style="font-size: 20px; margin-top: 7px"
+              >mdi-close</v-icon
+            >
+          </v-card-title>
+          <v-card-title style="color: #1369b0; font-weight: 700"
+            >ดอกเบี้ยสามปีแรก 5.05 %</v-card-title
+          >
+          <v-card-subtitle style="color: #1369b0; font-weight: 700"
+            >รายละเอียดเพิ่มเติม</v-card-subtitle
+          >
+          <v-card-text>
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">กู้ได้สูงสุด</span>
+              <div style="flex-grow: 1"></div>
+              <div class="second-label">
+                <span style="color: #1369b0">90% </span>
+                <span>ของราคาประเมิน</span>
+              </div>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ประกันชีวิต (MRTA)</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label">ไม่ต้องทำ</span>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ผ่อนต่อเดือน (บาท)</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label" style="color: #1369b0">9,500</span>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ระยะเวลากู้สูงสุด (ปี)</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label">40 ปี</span>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ค่าใช้จ่ายอื่น ๆ</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label">13,600</span>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ดอกเบี้ยสามปีแรก</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label" style="color: #1369b0">5.05%</span>
+            </div>
+
+            <div class="d-flex" style="line-height: 25px">
+              <span class="main-label">ดอกเบี้ยสามปีแรก</span>
+              <div style="flex-grow: 1"></div>
+              <span class="second-label" style="color: #1369b0">6.05%</span>
+            </div>
+          </v-card-text>
+          <v-card-subtitle style="color: #1369b0; font-weight: 700"
+            >ข้อดีของผลิตภัณฑ์ตัวนี้</v-card-subtitle
+          >
+          <v-card-text>
+            <div class="text-subtitle-modal">✓ แจ้งสถานะการติดตามผล</div>
+            <div class="text-subtitle-modal">✓ รู้ผลภายใน 48 ชั่วโมง</div>
+            <div class="text-subtitle-modal">✓ ส่งเอกสารสารออนไลน์</div>
+          </v-card-text>
+
+          <v-card-subtitle style="color: #1369b0; font-weight: 700"
+            >Reviews</v-card-subtitle
+          >
+          <v-card-text>
+            <div class="d-flex" style="flex-direction: row">
+              <span
+                style="
+                  color: #1369b0;
+                  font-size: 32px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+                >8.5</span
+              >
+              <div
+                class="d-flex"
+                style="flex-direction: column; margin-left: 18px"
+              >
+                <div
+                  style="
+                    color: #1369b0;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                >
+                  ระดับ ดีเยี่ยม
+                </div>
+                <div
+                  style="
+                    color: #2d2d2d;
+                    font-size: 11px;
+                    font-style: normal;
+                    font-weight: 500;
+                  "
+                >
+                  4330 รีวิว
+                </div>
+              </div>
+            </div>
+          </v-card-text>
+          <v-checkbox
+            label="คุณได้ยอมรับข้อตกลงและเงื่อนไข และ นโยบายความคุ้มครองส่วนบุคคลของ RoofSaver "
+          ></v-checkbox>
+          <v-card-actions>
+            <v-btn
+              color="primary"
+              variant="elevated"
+              block
+              @click="dialog_detail = false"
+              style="padding: 25px"
+              >สมัครเลย !</v-btn
+            >
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-responsive>
   </v-container>
 </template>
@@ -588,6 +725,7 @@ export default {
   data: () => ({
     dialog: false,
     dialog_submit: false,
+    dialog_detail: false,
     loading: false,
     sprin: 50,
   }),
