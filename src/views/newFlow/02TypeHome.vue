@@ -185,8 +185,8 @@ export default {
     console.log(this.navigate);
     if (this.navigate === null) {
       let liffIdData = '';
-      liffIdData = { liffId: '1661053996-DM6wOEgR' }; // offline
-      //  liffIdData = { liffId: "1661053996-85PKey2w" }; // online
+      // liffIdData = { liffId: '1661053996-DM6wOEgR' }; // offline
+       liffIdData = { liffId: "1661053996-85PKey2w" }; // online
 
       liff
         .init(liffIdData)

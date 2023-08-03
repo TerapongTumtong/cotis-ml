@@ -608,11 +608,11 @@ export default {
     let liffIdData = '';
     if (isDialogActive) {
       this.dialog = true;
-      liffIdData = { liffId: '1661053996-leP7JVXD' }; // offline
-      // liffIdData = { liffId: '1661053996-5l7ngqMJ' }; // online
+      // liffIdData = { liffId: '1661053996-leP7JVXD' }; // offline
+      liffIdData = { liffId: '1661053996-5l7ngqMJ' }; // online
     } else {
-      liffIdData = { liffId: '1661053996-o26EmVjA' }; // offline
-      // liffIdData = { liffId: '1661053996-ob21KOkQ' }; // online
+      // liffIdData = { liffId: '1661053996-o26EmVjA' }; // offline
+      liffIdData = { liffId: '1661053996-ob21KOkQ' }; // online
     }
 
     liff
