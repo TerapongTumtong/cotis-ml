@@ -164,8 +164,8 @@
     },
     async created() {
       let liffIdData='';
-      //  liffIdData = { liffId: "1661053996-GoeqoEaz" }; // offline
-       liffIdData = { liffId: "1661053996-BRKLDMaj" }; // online
+       liffIdData = { liffId: "1661053996-GoeqoEaz" }; // offline
+      //  liffIdData = { liffId: "1661053996-BRKLDMaj" }; // online
         localStorage.setItem("flow","2");
 liff.init(liffIdData).then(async () => {
 if (liff.isLoggedIn()) {

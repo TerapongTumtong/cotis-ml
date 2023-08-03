@@ -43,8 +43,8 @@
                     alt=""
                     :src="
                       homeSelect === '1'
-                        ? 'src/assets/images/buttons/single-house-active.png'
-                        : 'src/assets/images/buttons/single-house-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/single-house-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/single-house-default.png'
                     "
                     width="101"
                     height="90"
@@ -75,8 +75,8 @@
                     alt=""
                     :src="
                       homeSelect === '2'
-                        ? 'src/assets/images/buttons/town-house-active.png'
-                        : 'src/assets/images/buttons/town-house-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/town-house-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/town-house-default.png'
                     "
                     width="101"
                     height="90"
@@ -111,8 +111,8 @@
                     alt=""
                     :src="
                       homeSelect === '3'
-                        ? 'src/assets/images/buttons/condo-active.png'
-                        : 'src/assets/images/buttons/condo-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/condo-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/condo-default.png'
                     "
                     width="101"
                     height="90"
@@ -142,8 +142,8 @@
                     alt=""
                     :src="
                       homeSelect === '4'
-                        ? 'src/assets/images/buttons/land-active.png'
-                        : 'src/assets/images/buttons/land-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/land-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/land-default.png'
                     "
                     width="101"
                     height="90"
@@ -183,8 +183,8 @@ import liff from '@line/liff';
 export default {
   created() {
     let liffIdData = '';
-    // liffIdData = { liffId: '1661053996-DM6wOEgR' }; // offline
-     liffIdData = { liffId: "1661053996-85PKey2w" }; // online
+    liffIdData = { liffId: '1661053996-DM6wOEgR' }; // offline
+    //  liffIdData = { liffId: "1661053996-85PKey2w" }; // online
 
     liff
       .init(liffIdData)
@@ -245,6 +245,7 @@ export default {
         this.flagbtn3 = 'text';
         this.flagbtn4 = 'text';
         this.homeSelect = '1';
+        localStorage.setItem('flow', '1');
       }
       if (n == '2') {
         this.ids = 2;
@@ -253,6 +254,7 @@ export default {
         this.flagbtn3 = 'text';
         this.flagbtn4 = 'text';
         this.homeSelect = '2';
+        localStorage.setItem('flow', '2');
       }
 
       if (n == '3') {
@@ -262,6 +264,7 @@ export default {
         this.flagbtn3 = 'outlined';
         this.flagbtn4 = 'text';
         this.homeSelect = '3';
+        localStorage.setItem('flow', '3');
       }
 
       if (n == '4') {
@@ -271,6 +274,7 @@ export default {
         this.flagbtn3 = 'text';
         this.flagbtn4 = 'outlined';
         this.homeSelect = '4';
+        localStorage.setItem('flow', '4');
       }
       this.disabledValue = false;
     },

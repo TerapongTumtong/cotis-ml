@@ -80,8 +80,8 @@
     },
     async created() {
       let liffIdData='';
-      //  liffIdData = { liffId: "1661053996-a3PKR2wk" }; // offline
-       liffIdData = { liffId: "1661053996-KeMl8b24" }; // online
+       liffIdData = { liffId: "1661053996-a3PKR2wk" }; // offline
+      //  liffIdData = { liffId: "1661053996-KeMl8b24" }; // online
 liff.init(liffIdData).then(async () => {
 if (liff.isLoggedIn()) {
  console.log((await liff.getProfile()).userId);

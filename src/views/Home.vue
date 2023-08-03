@@ -5,7 +5,7 @@
         <v-col cols="auto">
           <img
             alt=""
-            src="src/assets/images/Logos-Tisco.png
+            src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/Logos-Tisco.png
                     "
             width="218"
             height="90"
@@ -70,8 +70,8 @@ export default {
   },
   async created() {
     let liffIdData = '';
-    // liffIdData = { liffId: '1661053996-qZXnM4oG' }; // offline
-     liffIdData = { liffId: "1661053996-ypbnDgve" }; // online
+    liffIdData = { liffId: '1661053996-qZXnM4oG' }; // offline
+    //  liffIdData = { liffId: "1661053996-ypbnDgve" }; // online
 
     liff
       .init(liffIdData)

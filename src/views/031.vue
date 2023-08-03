@@ -38,7 +38,7 @@
                 >
                   <img
                     alt=""
-                    src="src/assets/images/buttons/payroll.png"
+                    src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/payroll.png"
                     width="101"
                     height="90"
                   />
@@ -68,7 +68,7 @@
                 >
                   <img
                     alt=""
-                    src="src/assets/images/buttons/cash.png
+                    src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/cash.png
                     "
                     width="101"
                     height="90"

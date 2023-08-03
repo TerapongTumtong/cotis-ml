@@ -3,6 +3,7 @@
     <v-responsive class="d-flex align-center text-center fill-height">
       <v-row
         class="d-flex align-center justify-center"
+        style="margin-top: 3px; margin-bottom: 3px"
       >
         <v-col cols="auto">
           <span
@@ -12,15 +13,18 @@
               font-style: normal;
               font-weight: 700;
             "
-            >เลือกอาชีพของคุณ</span
+            >เลือกตามความชอบของคุณ</span
           >
         </v-col>
       </v-row>
-      <v-radio-group v-model="occupationSelect" column>
-        <v-row class="d-flex align-center justify-center">
-          <v-col cols="auto">
+      <v-radio-group v-model="homeSelect" column>
+        <v-row
+          class="d-flex align-center justify-center"
+          style="margin-top: 2px"
+        >
+          <v-col class="custom-radio">
             <v-sheet class="d-flex flex-wrap">
-              <v-sheet class="box-shadow flex-1-0 ma-0 pa-0">
+              <v-sheet class="flex-1-0 ma-0 pa-0">
                 <!-- item 1-->
 
                 <v-btn
@@ -29,26 +33,19 @@
                   color="primary"
                   class="d-flex align-center justify-center"
                   style="
-                    width: 203px;
-                    height: 157px;
+                    width: 98%;
+                    height: 55px;
                     margin: 0.3em;
                     padding: 0.3em;
+                    color: black;
+                    background-color: #f5f5f5 !important;
                   "
                 >
-                  <img
-                    alt=""
-                    :src="
-                      occupationSelect === '1'
-                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/employee-active.png'
-                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/employee-default.png'
-                    "
-                    width="130"
-                    height="80"
-                    style="margin-top: 14px;"
-                  />
-                  <br />
-                  <span style="color: black;margin-top: -8px;">พนักงานบริษัท</span>
-                  <v-radio value="1" v-on:click="clickBtn('1')"></v-radio>
+                  <v-radio
+                    value="1"
+                    v-on:click="clickBtn('1')"
+                    label="ดอกเบี้ยต่ำ🔻"
+                  ></v-radio>
                 </v-btn>
 
                 <!-- item 1-->
@@ -56,10 +53,13 @@
             </v-sheet>
           </v-col>
         </v-row>
-        <v-row class="d-flex align-center justify-center">
-          <v-col cols="auto">
+        <v-row
+          class="d-flex align-center justify-center"
+          style="margin-top: 2px"
+        >
+          <v-col class="custom-radio">
             <v-sheet class="d-flex flex-wrap">
-              <v-sheet class="box-shadow flex-1-0 ma-0 pa-0">
+              <v-sheet class="flex-1-0 ma-0 pa-0">
                 <!-- item 1-->
 
                 <v-btn
@@ -68,26 +68,19 @@
                   color="primary"
                   class="d-flex align-center justify-center"
                   style="
-                    width: 203px;
-                    height: 157px;
+                    width: 98%;
+                    height: 55px;
                     margin: 0.3em;
                     padding: 0.3em;
+                    color: black;
+                    background-color: #f5f5f5 !important;
                   "
                 >
-                  <img
-                    alt=""
-                    :src="
-                      occupationSelect === '2'
-                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/business-active.png'
-                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/business-default.png'
-                    "
-                    width="130"
-                    height="80"
-                     style="margin-top: 14px;"
-                  />
-                  <br />
-                  <span style="color: black;margin-top: -8px;">ธุรกิจส่วนตัว</span>
-                  <v-radio value="2" v-on:click="clickBtn('2')"></v-radio>
+                  <v-radio
+                    value="2"
+                    v-on:click="clickBtn('2')"
+                    label="ค่างวดน้อย 🤏"
+                  ></v-radio>
                 </v-btn>
 
                 <!-- item 1-->
@@ -95,10 +88,13 @@
             </v-sheet>
           </v-col>
         </v-row>
-        <v-row class="d-flex align-center justify-center">
-          <v-col cols="auto">
+        <v-row
+          class="d-flex align-center justify-center"
+          style="margin-top: 2px"
+        >
+          <v-col class="custom-radio">
             <v-sheet class="d-flex flex-wrap">
-              <v-sheet class="box-shadow flex-1-0 ma-0 pa-0">
+              <v-sheet class="flex-1-0 ma-0 pa-0">
                 <!-- item 1-->
 
                 <v-btn
@@ -107,26 +103,19 @@
                   color="primary"
                   class="d-flex align-center justify-center"
                   style="
-                    width: 203px;
-                    height: 157px;
+                    width: 98%;
+                    height: 55px;
                     margin: 0.3em;
                     padding: 0.3em;
+                    color: black;
+                    background-color: #f5f5f5 !important;
                   "
                 >
-                  <img
-                    alt=""
-                    :src="
-                      occupationSelect === '3'
-                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/freelance-active.png'
-                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/freelance-default.png'
-                    "
-                    width="130"
-                    height="80"
-                     style="margin-top: 14px;"
-                  />
-                  <br />
-                  <span style="color: black;margin-top: -8px;">ฟรีแลนซ์</span>
-                  <v-radio value="3" v-on:click="clickBtn('3')"></v-radio>
+                  <v-radio
+                    value="3"
+                    v-on:click="clickBtn('3')"
+                    label="วงเงินสูง 💵"
+                  ></v-radio>
                 </v-btn>
 
                 <!-- item 1-->
@@ -156,34 +145,44 @@
 </template>
 
 <script>
+import liff from '@line/liff';
 export default {
+  created() {
+    let liffIdData = '';
+    liffIdData = { liffId: '1661053996-DM6wOEgR' }; // offline
+    //  liffIdData = { liffId: "1661053996-85PKey2w" }; // online
+
+    liff
+      .init(liffIdData)
+      .then(async () => {
+        if (liff.isLoggedIn()) {
+          console.log((await liff.getProfile()).userId);
+          localStorage.setItem('profileId', (await liff.getProfile()).userId);
+        } else {
+          liff.login();
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  },
+
   data() {
     return {
-      occupationSelect: '',
+      homeSelect: '',
       value: [0, 100],
       flagbtn1: 'text',
       flagbtn2: 'text',
       flagbtn3: 'text',
+      flagbtn4: 'text',
       disabledValue: true,
       ids: 0,
+      navigate: localStorage.getItem('homeFlow'),
     };
   },
   methods: {
     gogo() {
-      // alert(this.ids)
-      // if (this.ids == '1') {
-      //   localStorage.setItem('flow', '1');
-      //   //  this.$router.push('/Homevalue')
-      // } else if (this.ids == '2') {
-      //   localStorage.setItem('flow', '1');
-      //   //   this.$router.push('/Homevalue')
-      // } else if (this.ids == '3') {
-      //   localStorage.setItem('flow', '1');
-      //   //   this.$router.push('/Homevalue')
-      // }
-
-      // localStorage.setItem('flow', '1');
-      this.$router.push('/Loading2');
+      this.$router.push('/TypeHome2');
     },
     clickBtn(n) {
       if (n == '1') {
@@ -191,23 +190,35 @@ export default {
         this.flagbtn1 = 'outlined';
         this.flagbtn2 = 'text';
         this.flagbtn3 = 'text';
-        this.occupationSelect = '1';
+        this.flagbtn4 = 'text';
+        this.homeSelect = '1';
       }
       if (n == '2') {
         this.ids = 2;
         this.flagbtn1 = 'text';
         this.flagbtn2 = 'outlined';
         this.flagbtn3 = 'text';
-        this.occupationSelect = '2';
+        this.flagbtn4 = 'text';
+        this.homeSelect = '2';
       }
+
       if (n == '3') {
         this.ids = 3;
         this.flagbtn1 = 'text';
         this.flagbtn2 = 'text';
         this.flagbtn3 = 'outlined';
-        this.occupationSelect = '3';
+        this.flagbtn4 = 'text';
+        this.homeSelect = '3';
       }
 
+      if (n == '4') {
+        this.ids = 4;
+        this.flagbtn1 = 'text';
+        this.flagbtn2 = 'text';
+        this.flagbtn3 = 'text';
+        this.flagbtn4 = 'outlined';
+        this.homeSelect = '4';
+      }
       this.disabledValue = false;
     },
   },
@@ -230,5 +241,12 @@ export default {
     drop-shadow(
       0px 0.825581431388855px 12.383721351623535px rgba(214, 214, 214, 0.02)
     );
+}
+:deep(.v-selection-control .v-label) {
+  color: black !important;
+}
+
+.custom-radio :deep(.v-btn__content) {
+  margin-right: auto;
 }
 </style>

@@ -21,7 +21,7 @@
         <v-col>
           <img
             alt=""
-            src="src/assets/images/map.png
+            src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/map.png
             "
             width="357"
             height="184"
@@ -91,7 +91,7 @@
           <v-col>
             <img
               alt=""
-              src="src/assets/images/chart.png
+              src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/chart.png
             "
               width="280"
               height="240"

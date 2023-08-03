@@ -40,8 +40,8 @@
                     alt=""
                     :src="
                       isFlowselect1
-                        ? 'src/assets/images/buttons/trade-license-active.png'
-                        : 'src/assets/images/buttons/trade-license-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/trade-license-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/trade-license-default.png'
                     "
                     width="101"
                     height="110"
@@ -76,8 +76,8 @@
                     alt=""
                     :src="
                       isFlowselect2
-                        ? 'src/assets/images/buttons/account-statement-active.png'
-                        : 'src/assets/images/buttons/account-statement-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/account-statement-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/account-statement-default.png'
                     "
                     width="101"
                     height="110"

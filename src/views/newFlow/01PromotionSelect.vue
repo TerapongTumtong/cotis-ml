@@ -40,8 +40,8 @@
                     alt=""
                     :src="
                       flowSelect === '1'
-                        ? 'src/assets/images/buttons/search-active.png'
-                        : 'src/assets/images/buttons/search-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/search-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/search-default.png'
                     "
                     width="101"
                     height="90"
@@ -72,8 +72,8 @@
                     alt=""
                     :src="
                       flowSelect === '2'
-                        ? 'src/assets/images/buttons/heart-active.png'
-                        : 'src/assets/images/buttons/heart-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/heart-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/heart-default.png'
                     "
                     width="101"
                     height="90"
@@ -122,7 +122,11 @@ export default {
   },
   methods: {
     gogo() {
-      this.$router.push('/TypeHome2');
+      if(this.flowSelect === '1'){
+        this.$router.push('/TypeHome2');
+      }else{
+        this.$router.push('/WhatUserWant');
+      }
       // alert(this.ids)
       // if (this.ids == '1') {
       //   localStorage.setItem('flow', '1');

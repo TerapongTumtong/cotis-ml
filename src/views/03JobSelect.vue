@@ -39,8 +39,8 @@
                     alt=""
                     :src="
                       occupationSelect === '1'
-                        ? 'src/assets/images/buttons/employee-active.png'
-                        : 'src/assets/images/buttons/employee-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/employee-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/employee-default.png'
                     "
                     width="130"
                     height="80"
@@ -79,8 +79,8 @@
                     alt=""
                     :src="
                       occupationSelect === '2'
-                        ? 'src/assets/images/buttons/business-active.png'
-                        : 'src/assets/images/buttons/business-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/business-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/business-default.png'
                     "
                     width="130"
                     height="80"
@@ -118,8 +118,8 @@
                     alt=""
                     :src="
                       occupationSelect === '3'
-                        ? 'src/assets/images/buttons/freelance-active.png'
-                        : 'src/assets/images/buttons/freelance-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/freelance-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/freelance-default.png'
                     "
                     width="130"
                     height="80"

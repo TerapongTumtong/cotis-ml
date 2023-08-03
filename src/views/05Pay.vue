@@ -37,7 +37,7 @@
                 >
                   <img
                     alt=""
-                    src="src/assets/images/buttons/plan.png
+                    src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/plan.png
                     "
                     width="101"
                     height="90"
@@ -68,7 +68,7 @@
                 >
                   <img
                     alt=""
-                    src="src/assets/images/buttons/now.png
+                    src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/now.png
                     "
                     width="101"
                     height="90"
@@ -98,7 +98,7 @@
                 >
                   <img
                     alt=""
-                    src="src/assets/images/buttons/late.png
+                    src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/late.png
                     "
                     width="101"
                     height="90"

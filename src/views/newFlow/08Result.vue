@@ -538,7 +538,7 @@
               <v-col cols="auto">
                 <img
                   alt=""
-                  src="src/assets/images/submit.png"
+                  src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/submit.png"
                   width="240"
                   height="150"
                 />

@@ -43,8 +43,8 @@
                     alt=""
                     :src="
                       homeSelect === '1'
-                        ? 'src/assets/images/buttons/single-house-active.png'
-                        : 'src/assets/images/buttons/single-house-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/single-house-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/single-house-default.png'
                     "
                     width="101"
                     height="90"
@@ -75,8 +75,8 @@
                     alt=""
                     :src="
                       homeSelect === '2'
-                        ? 'src/assets/images/buttons/town-house-active.png'
-                        : 'src/assets/images/buttons/town-house-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/town-house-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/town-house-default.png'
                     "
                     width="101"
                     height="90"
@@ -111,8 +111,8 @@
                     alt=""
                     :src="
                       homeSelect === '3'
-                        ? 'src/assets/images/buttons/condo-active.png'
-                        : 'src/assets/images/buttons/condo-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/condo-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/condo-default.png'
                     "
                     width="101"
                     height="90"
@@ -142,8 +142,8 @@
                     alt=""
                     :src="
                       homeSelect === '4'
-                        ? 'src/assets/images/buttons/land-active.png'
-                        : 'src/assets/images/buttons/land-default.png'
+                        ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/land-active.png'
+                        : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/buttons/land-default.png'
                     "
                     width="101"
                     height="90"

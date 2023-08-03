@@ -21,7 +21,7 @@
         <v-col cols="auto">
           <img
             alt=""
-            src="src/assets/images/work-experience.png
+            src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/work-experience.png
             "
             width="153"
             height="189"

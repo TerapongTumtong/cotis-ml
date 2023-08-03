@@ -21,7 +21,7 @@
         <v-col>
           <img
             alt=""
-            src="src/assets/images/size-home.png
+            src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/size-home.png
             "
             width="290"
             height="163"
@@ -32,7 +32,7 @@
       <v-row class="d-flex align-center justify-center">
         <v-col>
           <table style="width: 100%">
-            <tr>
+            <tr v-if="isHome || isLand">
               <td colspan="3" style="text-align: left; padding-bottom: 10px">
                 <span
                   style="
@@ -45,7 +45,7 @@
                 >
               </td>
             </tr>
-            <tr>
+            <tr v-if="isHome || isLand">
               <td colspan="3">
                 <div class="input-suffix ms">
                   <input
@@ -57,7 +57,7 @@
                 </div>
               </td>
             </tr>
-            <tr>
+            <tr v-if="isHome || isCondo">
               <td
                 colspan="3"
                 style="
@@ -77,7 +77,7 @@
                 >
               </td>
             </tr>
-            <tr>
+            <tr v-if="isHome || isCondo">
               <td colspan="3">
                 <div class="input-suffix mm">
                   <input
@@ -94,8 +94,8 @@
                 <v-btn
                   block
                   variant="elevated"
-                  :color="!isDisabled ? '' : 'primary'"
-                  :disabled="!isDisabled"
+                  :color="!isNotDisabled ? '' : 'primary'"
+                  :disabled="!isNotDisabled"
                   style="margin-top: 30px; padding: 25px"
                   v-on:click="gogo"
                 >
@@ -119,6 +119,7 @@ export default {
     return {
       salary: '',
       expenses: '',
+      typeHouse: localStorage.getItem('flow'),
     };
   },
   computed: {
@@ -128,9 +129,31 @@ export default {
     getNumberFromExpenses() {
       return this.numberWithCommas(this.expenses);
     },
-    isDisabled() {
-      return this.salary !== '' && this.expenses !== '';
+    isNotDisabled() {
+      let check = true
+      if(this.isCondo){
+       check =  this.expenses !== ''
+      }
+      if(this.isLand){
+       check =  this.salary !== ''
+      }
+      if(this.isHome){
+        check =  this.expenses !== '' && this.salary !== ''
+      }
+      return check;
     },
+    isHome() {
+      return this.typeHouse === '1' || this.typeHouse === '2';
+    },
+    isCondo() {
+      return this.typeHouse === '3';
+    },
+    isLand() {
+      return this.typeHouse === '4';
+    },
+  },
+  created() {
+    console.log(localStorage.getItem('flow'));
   },
   methods: {
     numberWithCommas(x) {

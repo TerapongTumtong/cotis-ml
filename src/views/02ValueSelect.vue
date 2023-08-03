@@ -159,7 +159,7 @@
                 <div class="d-flex">
                   <img
                     alt=""
-                    src="src/assets/images/save-house.png
+                    src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/save-house.png
                         "
                     width="90"
                     height="70"

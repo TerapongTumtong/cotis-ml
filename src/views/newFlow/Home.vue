@@ -18,7 +18,7 @@
         <v-col cols="auto">
           <img
             alt=""
-            src="src/assets/images/roof-of-life.png
+            src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/roof-of-life.png
             "
             width="110"
             height="110"
@@ -29,7 +29,7 @@
         <v-col cols="auto">
           <img
             alt=""
-            src="src/assets/images/roof-saver.png
+            src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/roof-saver.png
             "
             width="226"
             height="65"
@@ -398,7 +398,7 @@
         <v-col cols="auto">
           <img
             alt=""
-            src="src/assets/images/search-house.png
+            src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/search-house.png
             "
             width="226"
             height="244"
@@ -608,11 +608,11 @@ export default {
     let liffIdData = '';
     if (isDialogActive) {
       this.dialog = true;
-      // liffIdData = { liffId: '1661053996-leP7JVXD' }; // offline
-       liffIdData = { liffId: "1661053996-5l7ngqMJ" }; // online
+      liffIdData = { liffId: '1661053996-leP7JVXD' }; // offline
+      // liffIdData = { liffId: '1661053996-5l7ngqMJ' }; // online
     } else {
-      // liffIdData = { liffId: '1661053996-o26EmVjA' }; // offline
-       liffIdData = { liffId: "1661053996-ob21KOkQ" }; // online
+      liffIdData = { liffId: '1661053996-o26EmVjA' }; // offline
+      // liffIdData = { liffId: '1661053996-ob21KOkQ' }; // online
     }
 
     liff
@@ -643,7 +643,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .main {
-  background-image: url('src/assets/images/bg.png');
+  background-image: url('https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/bg.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
