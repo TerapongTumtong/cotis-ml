@@ -334,10 +334,6 @@ var server = http.createServer(function (req, res) {
                           size: 'full',
                           aspectRatio: '20:13',
                           aspectMode: 'fit',
-                          action: {
-                            type: 'uri',
-                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
-                          },
                         },
                         body: {
                           type: 'box',
@@ -361,14 +357,10 @@ var server = http.createServer(function (req, res) {
                         type: 'bubble',
                         hero: {
                           type: 'image',
-                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
                           size: 'full',
                           aspectRatio: '20:13',
                           aspectMode: 'fit',
-                          action: {
-                            type: 'uri',
-                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
-                          },
                         },
                         body: {
                           type: 'box',
@@ -392,14 +384,10 @@ var server = http.createServer(function (req, res) {
                         type: 'bubble',
                         hero: {
                           type: 'image',
-                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
                           size: 'full',
                           aspectRatio: '20:13',
                           aspectMode: 'fit',
-                          action: {
-                            type: 'uri',
-                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
-                          },
                         },
                         body: {
                           type: 'box',
@@ -446,14 +434,10 @@ var server = http.createServer(function (req, res) {
                         type: 'bubble',
                         hero: {
                           type: 'image',
-                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
                           size: 'full',
                           aspectRatio: '20:13',
                           aspectMode: 'fit',
-                          action: {
-                            type: 'uri',
-                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
-                          },
                         },
                         body: {
                           type: 'box',
@@ -481,10 +465,6 @@ var server = http.createServer(function (req, res) {
                           size: 'full',
                           aspectRatio: '20:13',
                           aspectMode: 'fit',
-                          action: {
-                            type: 'uri',
-                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
-                          },
                         },
                         body: {
                           type: 'box',
@@ -508,14 +488,10 @@ var server = http.createServer(function (req, res) {
                         type: 'bubble',
                         hero: {
                           type: 'image',
-                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
                           size: 'full',
                           aspectRatio: '20:13',
                           aspectMode: 'fit',
-                          action: {
-                            type: 'uri',
-                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
-                          },
                         },
                         body: {
                           type: 'box',
@@ -561,45 +537,10 @@ var server = http.createServer(function (req, res) {
                         type: 'bubble',
                         hero: {
                           type: 'image',
-                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
                           size: 'full',
                           aspectRatio: '20:13',
                           aspectMode: 'fit',
-                          action: {
-                            type: 'uri',
-                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main1.png',
-                          },
-                        },
-                        body: {
-                          type: 'box',
-                          layout: 'horizontal',
-                          contents: [
-                            {
-                              type: 'button',
-                              action: {
-                                type: 'uri',
-                                label: 'รายละเอียด',
-                                uri: 'https://liff.line.me/1661053996-5l7ngqMJ',
-                              },
-                              color: '#0384fc',
-                              style: 'primary',
-                              height: 'sm',
-                            },
-                          ],
-                        },
-                      },
-                      {
-                        type: 'bubble',
-                        hero: {
-                          type: 'image',
-                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
-                          size: 'full',
-                          aspectRatio: '20:13',
-                          aspectMode: 'fit',
-                          action: {
-                            type: 'uri',
-                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main2.png',
-                          },
                         },
                         body: {
                           type: 'box',
@@ -627,10 +568,33 @@ var server = http.createServer(function (req, res) {
                           size: 'full',
                           aspectRatio: '20:13',
                           aspectMode: 'fit',
-                          action: {
-                            type: 'uri',
-                            uri: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
-                          },
+                        },
+                        body: {
+                          type: 'box',
+                          layout: 'horizontal',
+                          contents: [
+                            {
+                              type: 'button',
+                              action: {
+                                type: 'uri',
+                                label: 'รายละเอียด',
+                                uri: 'https://liff.line.me/1661053996-5l7ngqMJ',
+                              },
+                              color: '#0384fc',
+                              style: 'primary',
+                              height: 'sm',
+                            },
+                          ],
+                        },
+                      },
+                      {
+                        type: 'bubble',
+                        hero: {
+                          type: 'image',
+                          url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/promotion-main3.png',
+                          size: 'full',
+                          aspectRatio: '20:13',
+                          aspectMode: 'fit',
                         },
                         body: {
                           type: 'box',
@@ -797,7 +761,7 @@ var server = http.createServer(function (req, res) {
               messages: [
                 {
                   type: 'text',
-                  text: 'รอสักครู่...เรากำลังติดต่อพนักงานดูแลสินเชื่อให้ค่ะ',
+                  text: 'เจ้าหน้าที่จะติดต่อกลับให้เร็วที่สุดครับ หรือสามารถติดต่อเจ้าหน้าที่ โทร. 02-6336222',
                 },
               ],
             },

@@ -517,6 +517,7 @@
               block
               @click="
                 dialog = false;
+                sendDataToLine();
                 dialog_submit = true;
               "
               style="padding: 25px"
@@ -557,14 +558,22 @@
                 ส่งข้อมูลให้ธนาคารเรียบร้อย
               </div>
 
-              <div class="main-label" style="line-height: 30px;">คุณจะได้รับการติดต่อกลับภายใน 1 วัน</div>
-              <div class="main-label" style="line-height: 30px;">เราจะส่งสถานะไปยัง SME ของคุณ</div>
+              <div class="main-label" style="line-height: 30px">
+                คุณจะได้รับการติดต่อกลับภายใน 1 วัน
+              </div>
+              <div class="main-label" style="line-height: 30px">
+                เราจะส่งสถานะไปยัง SME ของคุณ
+              </div>
 
-              <div class="main-label" style="line-height: 30px;">
+              <div class="main-label" style="line-height: 30px">
                 ---------------------------- หรือ ----------------------------
               </div>
-              <div class="main-label" style="line-height: 30px;">สามารถดูสถานะการสมัครของคุณได้ที่</div>
-              <div class="second-label" style="line-height: 30px;">LINE <span style="color: #1369b0">@homeequity</span></div>
+              <div class="main-label" style="line-height: 30px">
+                สามารถดูสถานะการสมัครของคุณได้ที่
+              </div>
+              <div class="second-label" style="line-height: 30px">
+                LINE <span style="color: #1369b0">@homeequity</span>
+              </div>
             </v-row>
           </v-card-text>
           <v-card-actions>
@@ -572,16 +581,18 @@
               color="primary"
               variant="outlined"
               block
-              @click="dialog_submit = false"
+              @click="
+                returnToLine();
+              "
               style="padding: 25px"
-              >หลับสู่หน้าหลัก</v-btn
+              >กลับสู่หน้าหลัก</v-btn
             >
           </v-card-actions>
         </v-card>
       </v-dialog>
 
       <!-- dialog detail -->
-       <v-dialog v-model="dialog_detail" width="340">
+      <v-dialog v-model="dialog_detail" width="340">
         <v-card>
           <v-card-title style="display: flex">
             <div
@@ -721,6 +732,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+import liff from '@line/liff';
 export default {
   data: () => ({
     dialog: false,
@@ -733,6 +746,70 @@ export default {
   methods: {
     required(v) {
       return !!v || 'Field is required';
+    },
+    async sendDataToLine() {
+      const headers = {
+        'Content-Type': 'application/json',
+      };
+      let req;
+
+      req = {
+        token:
+          'Bearer eVzQQbp6xcKhc9LNPSPwf3K1TgQ8Fp6Hgi8FKl8o4WSQNWrpJF7V5/suwjESd74m/0LtwWgThB7xNzvDfQCJ5eYKj6Ibu0OumCE69To5/PTEHrlG9o3S8sGCHTLhfviMPQsQFExdMWaKqD5l5f8EjAdB04t89/1O/w1cDnyilFU=',
+        userId: localStorage.getItem('profileId'),
+        data: {
+          to: [localStorage.getItem('profileId')],
+          messages: [
+            {
+              type: 'flex',
+              altText: 'Summary',
+              contents: {
+                type: 'bubble',
+                hero: {
+                  type: 'image',
+                  url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/tracking_1.png',
+                  size: 'full',
+                  aspectRatio: '18:19',
+                  aspectMode: 'fit',
+                  offsetTop: 'none',
+                  offsetStart: 'none',
+                },
+                body: {
+                  type: 'box',
+                  layout: 'horizontal',
+                  contents: [
+                    {
+                      type: 'button',
+                      action: {
+                        type: 'message',
+                        label: 'ติดต่อเจ้าหน้าที่',
+                        text: 'ติดต่อพนักงานดูแลสินเชื่อ',
+                      },
+                      style: 'primary',
+                      color: '#0384fc',
+                      height: 'sm',
+                    },
+                  ],
+                },
+              },
+            },
+          ],
+        },
+      };
+
+      await axios
+        .post('https://d3uc9t7bjwxv55.cloudfront.net/api/sendLineMsg', req, {
+          headers,
+        })
+        .then((response) => response.data);
+
+    },
+    async returnToLine() {
+      this.dialog_submit = false;
+      await liff.closeWindow();
+      await liff.logout();
+      await window.close();
+      this.$router.push('');
     },
   },
 };

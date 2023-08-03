@@ -381,7 +381,7 @@
       <v-row class="d-flex align-center justify-center">
         <v-col>
           <!-- btn select -->
-          <v-btn block variant="outlined" color="primary" style="padding: 20px">
+          <v-btn block variant="outlined" color="primary" style="padding: 20px"  @click="btnMorePromotion()">
             ดูโปรโมชั่นเพิ่มเติม
           </v-btn>
           <!-- btn select -->
@@ -630,6 +630,9 @@ export default {
       });
   },
   methods: {
+     btnMorePromotion() {
+      this.$router.push('/Result3');
+    },
     btnPromotion() {
       localStorage.setItem('homeFlow', 'promotion');
       this.$router.push('/PromotionSelect');
