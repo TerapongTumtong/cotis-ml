@@ -183,8 +183,8 @@ import liff from '@line/liff';
 export default {
   created() {
       let liffIdData = '';
-      // liffIdData = { liffId: '1661053996-DM6wOEgR' }; // offline
-       liffIdData = { liffId: "1661053996-85PKey2w" }; // online
+      // liffIdData = { liffId: '1661053996-DY29lPq4' }; // offline
+       liffIdData = { liffId: "1661053996-DQKkXGo9" }; // online
 
       liff
         .init(liffIdData)
@@ -193,7 +193,6 @@ export default {
             console.log((await liff.getProfile()).userId);
             localStorage.setItem('profileId', (await liff.getProfile()).userId);
           } else {
-            this.navigate = null
             liff.login();
           }
         })
@@ -231,7 +230,8 @@ export default {
       //   //  this.$router.push('/Deedlandvalue')
       // }
       // localStorage.setItem('flow', '1');
-        this.$router.push('/ValueSelect2');
+        this.$router.push('/Address');
+
     },
     clickBtn(n) {
       if (n == '1') {

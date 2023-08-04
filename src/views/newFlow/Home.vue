@@ -639,7 +639,7 @@ export default {
     },
     btnHouseEstimate() {
       localStorage.setItem('homeFlow', 'houseEstimate');
-      this.$router.push('/TypeHome2');
+      this.$router.push('/TypeHomeEstimate');
     },
   },
 };

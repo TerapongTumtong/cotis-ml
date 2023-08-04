@@ -22,6 +22,11 @@ const routes = [
         component: () => import('@/views/newFlow/02TypeHome.vue'),
       },
       {
+        path: '/TypeHomeEstimate',
+        name: 'TypeHomeEstimate',
+        component: () => import('@/views/newFlow/02TypeHomeEstimate.vue'),
+      },
+      {
         path: '/ValueSelect2',
         name: 'ValueSelect2',
         component: () => import('@/views/newFlow/03ValueSelect.vue'),
