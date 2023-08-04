@@ -105,11 +105,37 @@ const flow123 = async (userid, oneOrZero2) => {
         to: [userid],
         messages: [
           {
-            type: 'image',
-            originalContentUrl:
-              'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/api/AAA.png',
-            previewImageUrl:
-              'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/api/AAA.png',
+            type: 'flex',
+            altText: 'Summary',
+            contents: {
+              type: 'bubble',
+              hero: {
+                type: 'image',
+                url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/tracking_1.png',
+                size: 'full',
+                aspectRatio: '18:19',
+                aspectMode: 'fit',
+                offsetTop: 'none',
+                offsetStart: 'none',
+              },
+              body: {
+                type: 'box',
+                layout: 'horizontal',
+                contents: [
+                  {
+                    type: 'button',
+                    action: {
+                      type: 'message',
+                      label: 'ติดต่อเจ้าหน้าที่',
+                      text: 'ติดต่อพนักงานดูแลสินเชื่อ',
+                    },
+                    style: 'primary',
+                    color: '#0384fc',
+                    height: 'sm',
+                  },
+                ],
+              },
+            },
           },
         ],
       },
@@ -117,6 +143,7 @@ const flow123 = async (userid, oneOrZero2) => {
     await sendLineMsgin(reqq);
   }
   if (oneOrZero2 == 2) {
+    const randomNumber = Math.floor(Math.random() * 2);
     reqq = {
       token:
         'Bearer eVzQQbp6xcKhc9LNPSPwf3K1TgQ8Fp6Hgi8FKl8o4WSQNWrpJF7V5/suwjESd74m/0LtwWgThB7xNzvDfQCJ5eYKj6Ibu0OumCE69To5/PTEHrlG9o3S8sGCHTLhfviMPQsQFExdMWaKqD5l5f8EjAdB04t89/1O/w1cDnyilFU=',
@@ -125,11 +152,37 @@ const flow123 = async (userid, oneOrZero2) => {
         to: [userid],
         messages: [
           {
-            type: 'image',
-            originalContentUrl:
-              'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/api/vvvv.png',
-            previewImageUrl:
-              'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/api/vvvv.png',
+            type: 'flex',
+            altText: 'Summary',
+            contents: {
+              type: 'bubble',
+              hero: {
+                type: 'image',
+                url: randomNumber === 0 ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/tracking_2.png' : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/tracking_2-1.png',
+                size: 'full',
+                aspectRatio: '18:19',
+                aspectMode: 'fit',
+                offsetTop: 'none',
+                offsetStart: 'none',
+              },
+              body: {
+                type: 'box',
+                layout: 'horizontal',
+                contents: [
+                  {
+                    type: 'button',
+                    action: {
+                      type: 'message',
+                      label: 'ติดต่อเจ้าหน้าที่',
+                      text: 'ติดต่อพนักงานดูแลสินเชื่อ',
+                    },
+                    style: 'primary',
+                    color: '#0384fc',
+                    height: 'sm',
+                  },
+                ],
+              },
+            },
           },
         ],
       },
@@ -156,6 +209,7 @@ const flow123 = async (userid, oneOrZero2) => {
   }
 
   if (oneOrZero2 == 3) {
+    const randomNumber = Math.floor(Math.random() * 2);
     reqq = {
       token:
         'Bearer eVzQQbp6xcKhc9LNPSPwf3K1TgQ8Fp6Hgi8FKl8o4WSQNWrpJF7V5/suwjESd74m/0LtwWgThB7xNzvDfQCJ5eYKj6Ibu0OumCE69To5/PTEHrlG9o3S8sGCHTLhfviMPQsQFExdMWaKqD5l5f8EjAdB04t89/1O/w1cDnyilFU=',
@@ -164,11 +218,37 @@ const flow123 = async (userid, oneOrZero2) => {
         to: [userid],
         messages: [
           {
-            type: 'image',
-            originalContentUrl:
-              'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/api/bbb.png',
-            previewImageUrl:
-              'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/api/bbb.png',
+            type: 'flex',
+            altText: 'Summary',
+            contents: {
+              type: 'bubble',
+              hero: {
+                type: 'image',
+                url: randomNumber === 0 ? 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/tracking_3.png' : 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/tracking_3-1.png',
+                size: 'full',
+                aspectRatio: '18:19',
+                aspectMode: 'fit',
+                offsetTop: 'none',
+                offsetStart: 'none',
+              },
+              body: {
+                type: 'box',
+                layout: 'horizontal',
+                contents: [
+                  {
+                    type: 'button',
+                    action: {
+                      type: 'message',
+                      label: 'ติดต่อเจ้าหน้าที่',
+                      text: 'ติดต่อพนักงานดูแลสินเชื่อ',
+                    },
+                    style: 'primary',
+                    color: '#0384fc',
+                    height: 'sm',
+                  },
+                ],
+              },
+            },
           },
         ],
       },
@@ -812,15 +892,15 @@ var server = http.createServer(function (req, res) {
                         action: {
                           type: 'uri',
                           label: 'หาบ้านแลกเงิน',
-                          uri: 'https://liff.line.me/1661053996-ypbnDgve',
+                          uri: 'https://liff.line.me/1661053996-ob21KOkQ',
                         },
                       },
                       {
                         type: 'action', // 2
                         action: {
-                          type: 'message',
+                          type: 'uri',
                           label: 'ประเมินราคาบ้าน',
-                          text: 'ประเมินราคาบ้าน',
+                          text: 'https://liff.line.me/1661053996-85PKey2w',
                         },
                       },
                       {

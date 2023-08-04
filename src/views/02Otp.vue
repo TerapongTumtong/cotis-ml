@@ -297,11 +297,37 @@ export default {
                 text: 'สถานะของคุณอยู่ในขั้นตอนข้างล่างนี้',
               },
               {
-                type: 'image',
-                originalContentUrl:
-                  'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/api/AAA.png',
-                previewImageUrl:
-                  'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/api/AAA.png',
+                type: 'flex',
+                altText: 'Summary',
+                contents: {
+                  type: 'bubble',
+                  hero: {
+                    type: 'image',
+                    url: 'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/tracking_1.png',
+                    size: 'full',
+                    aspectRatio: '18:19',
+                    aspectMode: 'fit',
+                    offsetTop: 'none',
+                    offsetStart: 'none',
+                  },
+                  body: {
+                    type: 'box',
+                    layout: 'horizontal',
+                    contents: [
+                      {
+                        type: 'button',
+                        action: {
+                          type: 'message',
+                          label: 'ติดต่อเจ้าหน้าที่',
+                          text: 'ติดต่อพนักงานดูแลสินเชื่อ',
+                        },
+                        style: 'primary',
+                        color: '#0384fc',
+                        height: 'sm',
+                      },
+                    ],
+                  },
+                },
               },
               {
                 type: 'text', // ①
