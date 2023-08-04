@@ -191,24 +191,6 @@ const flow123 = async (userid, oneOrZero2) => {
       },
     };
     await sendLineMsgin(reqq);
-    reqq = {
-      token:
-        'Bearer eVzQQbp6xcKhc9LNPSPwf3K1TgQ8Fp6Hgi8FKl8o4WSQNWrpJF7V5/suwjESd74m/0LtwWgThB7xNzvDfQCJ5eYKj6Ibu0OumCE69To5/PTEHrlG9o3S8sGCHTLhfviMPQsQFExdMWaKqD5l5f8EjAdB04t89/1O/w1cDnyilFU=',
-      userId: userid,
-      data: {
-        to: [userid],
-        messages: [
-          {
-            type: 'image',
-            originalContentUrl:
-              'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/api/das.png',
-            previewImageUrl:
-              'https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/api/das.png',
-          },
-        ],
-      },
-    };
-    await sendLineMsgin(reqq);
   }
 
   if (oneOrZero2 == 3) {
@@ -277,7 +259,7 @@ const flow123 = async (userid, oneOrZero2) => {
             },
             {
               type: 'text', // ①
-              text: 'คุณลูกค้าต้องการให้แจ้งหากมีการเปลี่ยนสถานะหรือไม่ค่ะ!',
+              text: 'ต้องการให้แจ้งหากมีการเปลี่ยนสถานะหรือไม่ครับ!',
               quickReply: {
                 // ②
                 items: [
@@ -318,7 +300,7 @@ const flowEnd123 = async (userid, oneOrZero2) => {
         messages: [
           {
             type: 'text', // ①
-            text: 'คุณลูกค้าต้องการให้แจ้งหากมีการเปลี่ยนสถานะหรือไม่ค่ะ!',
+            text: 'ต้องการให้แจ้งหากมีการเปลี่ยนสถานะหรือไม่ครับ!',
             quickReply: {
               // ②
               items: [
@@ -967,49 +949,37 @@ var server = http.createServer(function (req, res) {
               messages: [
                 {
                   type: 'text', // ①
-                  text: 'คุณลูกค้าต้องการติดต่อสอบถามเรื่องใดค่ะ',
-                  quickReply: {
-                    // ②
-                    items: [
-                      {
-                        type: 'action', //1
-                        action: {
-                          type: 'uri',
-                          label: 'หาบ้านแลกเงิน',
-                          uri: 'https://liff.line.me/1661053996-ob21KOkQ',
-                        },
-                      },
-                      {
-                        type: 'action', // 2
-                        action: {
-                          type: 'uri',
-                          label: 'ประเมินราคาบ้าน',
-                          uri: 'https://liff.line.me/1661053996-DQKkXGo9',
-                        },
-                      },
-                      {
-                        type: 'action', // 3
-                        action: {
-                          type: 'message',
-                          label: 'ติดตามสถานะ',
-                          text: 'ติดตามสถานะ',
-                        },
-                      },
-                      {
-                        type: 'action', // 3
-                        action: {
-                          type: 'message',
-                          label: 'ติดต่อเจ้าหน้าที่',
-                          text: 'ติดต่อพนักงานดูแลสินเชื่อ',
-                        },
-                      },
-                    ],
-                  },
+                  text: 'เจ้าหน้าที่จะติดต่อกลับให้เร็วที่สุดครับ หรือสามารถติดต่อเจ้าหน้าที่ โทร. 02-6336222',
                 },
               ],
             },
           };
           await sendLineMsgin(reqq);
+
+          let data = qs.stringify({
+            message:
+              'มีลูกค้ากำลังรอติดต่อจากคุณ ชื่อ นาย ลูกค้า ทำกำไร เบอร์โทร: 0919999999 ธนาคาร: ทิสโก้ แคมเปล: สินเชื่อบ้านแลกเงิน สามารถดูรายละเอียดเพิ่มเติมได้ที่ www.tiscoml.com',
+          });
+          let config = {
+            method: 'post',
+            maxBodyLength: Infinity,
+            url: 'https://notify-api.line.me/api/notify',
+            headers: {
+              Authorization:
+                'Bearer PZI0ijP24xWZpPognDausFcV92CiTlwkqfXZgLPWZ9G',
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            data: data,
+          };
+
+          axios
+            .request(config)
+            .then((response) => {
+              console.log(JSON.stringify(response.data));
+            })
+            .catch((error) => {
+              console.log(error);
+            });
         }
         if (mainString.includes('แสดงสถานะล่าสุด')) {
           await flow123(userid, oneOrZero2);
@@ -1063,7 +1033,7 @@ var server = http.createServer(function (req, res) {
                   },
                   {
                     type: 'text',
-                    text: "หากต้องการประเมินโดยละเอียดสามารถกด 'ประเมินโดยละเอียด' ได้เลยค่ะ ",
+                    text: "หากต้องการประเมินโดยละเอียดสามารถกด 'ประเมินโดยละเอียด' ได้เลยครับ ",
                   },
                   {
                     type: 'flex',
@@ -1123,7 +1093,7 @@ var server = http.createServer(function (req, res) {
                 messages: [
                   {
                     type: 'text',
-                    text: 'รอสักครู่นะค่ะ เรากำลังตรวจสอบสถานะอยู่ค่ะ',
+                    text: 'รอสักครู่นะครับ เรากำลังตรวจสอบสถานะอยู่ครับ',
                   },
                 ],
               },
@@ -1144,7 +1114,7 @@ var server = http.createServer(function (req, res) {
                 messages: [
                   {
                     type: 'text',
-                    text: 'รบกวนกรอกเบอร์โทรศัพท์เพื่อใช้ในการตรวจสอบสถานะด้วยค่ะ',
+                    text: 'รบกวนกรอกเบอร์โทรศัพท์เพื่อใช้ในการตรวจสอบสถานะด้วยครับ',
                   },
                   {
                     type: 'flex',
@@ -1201,7 +1171,7 @@ var server = http.createServer(function (req, res) {
               messages: [
                 {
                   type: 'text',
-                  text: 'ยินดีค่ะเราจะทำการแจ้งเตือนทุกครั้งที่มีการเปลี่ยนแปลงสถานะ',
+                  text: 'ยินดีครับเราจะทำการแจ้งเตือนทุกครั้งที่มีการเปลี่ยนแปลงสถานะ',
                 },
               ],
             },
@@ -1217,7 +1187,7 @@ var server = http.createServer(function (req, res) {
               messages: [
                 {
                   type: 'text',
-                  text: "หากต้องการยกเลิกสามารถพิมพ์ 'ยกเลิกการเตือน' เพื่อยกเลิกการเตือนได้เลยค่ะ ",
+                  text: "หากต้องการยกเลิกสามารถพิมพ์ 'ยกเลิกการเตือน' เพื่อยกเลิกการเตือนได้เลยครับ ",
                 },
               ],
             },
@@ -1234,7 +1204,7 @@ var server = http.createServer(function (req, res) {
               messages: [
                 {
                   type: 'text',
-                  text: 'ได้เลยค่ะ หากต้องการติดตามสถานะ สามารถกดที่เมนู หรือติดต่อที่เบอร์ 089-999-9999 ได้เลยค่ะ',
+                  text: 'ได้เลยครับ หากต้องการติดตามสถานะ สามารถกดที่เมนู หรือติดต่อที่เบอร์ 089-999-9999 ได้เลยครับ',
                 },
               ],
             },

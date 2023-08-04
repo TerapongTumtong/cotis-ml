@@ -15,8 +15,8 @@
         </v-col>
       </v-row>
       <v-row>
-        <v-col>
-          <v-card max-width="374">
+        <v-col col="auto">
+          <v-card >
             <v-card-item style="text-align: left">
               <v-card-subtitle class="d-flex">
                 <span
@@ -104,9 +104,8 @@
           </v-card>
 
           <v-row style="margin-top: 10px">
-            <v-col>
+            <v-col col="auto">
               <v-card
-                max-width="374"
                 style="text-align: left; background-color: rgb(211 235 255)"
               >
                 <v-card-item style="text-align: left">
@@ -145,8 +144,8 @@
       </v-row>
       <!-- โปรโมชั่นที่ ๅ -->
       <v-row>
-        <v-col>
-          <v-card max-width="374">
+        <v-col col="auto">
+          <v-card >
             <v-card-item style="text-align: left">
               <v-card-subtitle class="d-flex">
                 <span
@@ -236,8 +235,8 @@
       </v-row>
       <!-- โปรโมชั่นที่ 2 -->
       <v-row>
-        <v-col>
-          <v-card max-width="374">
+        <v-col col="auto">
+          <v-card >
             <v-card-item style="text-align: left">
               <v-card-subtitle class="d-flex">
                 <span
@@ -327,8 +326,8 @@
       </v-row>
       <!-- โปรโมชั่นที่ 3 -->
       <v-row>
-        <v-col>
-          <v-card max-width="374">
+        <v-col col="auto">
+          <v-card >
             <v-card-item style="text-align: left">
               <v-card-subtitle class="d-flex">
                 <span

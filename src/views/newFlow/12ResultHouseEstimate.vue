@@ -67,11 +67,11 @@
             margin-bottom: 10px;
           "
         >
-          ฿5,000,000 - ฿6,000,000
+          ฿2,000,000 - ฿3,000,000
         </div>
         <div
           style="
-            color: #12b0a8;
+            color: #c2101a;
             font-size: 15px;
             font-style: normal;
             font-weight: 700;
@@ -80,7 +80,18 @@
             margin-bottom: 10px;
           "
         >
-          ราคาเพิ่มขึ้น 300,000 บาท จาก 1 ปีที่แล้ว
+          <span>
+            <img
+              alt=""
+              src="https://sbu-laal-laml.s3.ap-southeast-1.amazonaws.com/images/arrow-up.png
+            "
+              width="20"
+              height="20"
+              style="position: relative; bottom: -5px"
+            />
+          </span>
+
+          ราคาลดลง 150,000 บาท จาก 1 ปีที่แล้ว
         </div>
         <v-row style="margin-top: 10px">
           <v-col>
@@ -124,6 +135,7 @@
           สมัครสินเชื่อเลย !
         </v-btn>
         <v-btn
+          v-if="isNotByFlex"
           block
           variant="outlined"
           color="primary"
@@ -145,11 +157,17 @@ export default {
     dialog: false,
     loading: false,
     sprin: 50,
+    isNotByFlex: true,
   }),
-
+  created() {
+    const byFlex = this.$route.query.ByFlex;
+    if (byFlex) {
+      this.isNotByFlex = false;
+    }
+  },
   methods: {
     gogo() {
-      this.$router.push('/Result3');
+      this.$router.push('/Home2');
     },
     async sendDataToLine() {
       const headers = {
@@ -187,7 +205,7 @@ export default {
                       action: {
                         type: 'uri',
                         label: 'สมัครสินเชื่อเลย !',
-                        uri: 'https://liff.line.me/1661053996-85PKey2w',
+                        uri: 'https://liff.line.me/1661053996-ob21KOkQ',
                       },
                       style: 'primary',
                       color: '#0384fc',
@@ -198,7 +216,7 @@ export default {
                       action: {
                         type: 'uri',
                         label: 'รายละเอียดเพิ่มเติม',
-                        uri: 'https://liff.line.me/1661053996-G1BmJKOw',
+                        uri: 'https://liff.line.me/1661053996-GVa7b5Oy',
                       },
                       height: 'sm',
                       style: 'primary',
