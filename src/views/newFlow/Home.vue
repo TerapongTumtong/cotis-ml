@@ -582,7 +582,7 @@
               color="primary"
               variant="elevated"
               block
-              @click="dialog = false;btnPromotion()"
+              @click="dialog = false;btnPromotionPassPro()"
               style="padding: 25px"
               >สมัครเลย !</v-btn
             >
@@ -632,6 +632,10 @@ export default {
   methods: {
      btnMorePromotion() {
       this.$router.push('/Result3');
+    },
+     btnPromotionPassPro() {
+      localStorage.setItem('homeFlow', 'promotion');
+      this.$router.push('/TypeHome2');
     },
     btnPromotion() {
       localStorage.setItem('homeFlow', 'promotion');
